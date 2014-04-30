@@ -17,7 +17,7 @@
    inkscape:export-filename="/home/sebastiaan/Documents/cross.png"
    inkscape:export-xdpi="90.817253"
    inkscape:export-ydpi="90.817253"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="stimuli.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -27,17 +27,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="253.20072"
-     inkscape:cy="1021.7037"
+     inkscape:zoom="2.8"
+     inkscape:cx="212.58572"
+     inkscape:cy="876.86419"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      inkscape:snap-bbox="true"
-     inkscape:window-width="1680"
-     inkscape:window-height="1030"
-     inkscape:window-x="-2"
-     inkscape:window-y="547"
+     inkscape:window-width="1200"
+     inkscape:window-height="1580"
+     inkscape:window-x="1678"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -218,5 +218,182 @@
        inkscape:export-xdpi="151.875"
        inkscape:export-ydpi="151.875"
        sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#5c8600;fill-opacity:1;stroke:none"
+       id="rect3002"
+       width="32"
+       height="32"
+       x="96"
+       y="124.36218" />
+    <rect
+       style="fill:#68823f;fill-opacity:1;stroke:none"
+       id="rect3002-8"
+       width="32"
+       height="32"
+       x="128"
+       y="124.36218" />
+    <rect
+       style="fill:#528636;fill-opacity:1;stroke:none"
+       id="rect3002-2"
+       width="32"
+       height="32"
+       x="160"
+       y="124.36218" />
+    <rect
+       style="fill:#2e8b43;fill-opacity:1;stroke:none"
+       id="rect3002-6"
+       width="32"
+       height="32"
+       x="192"
+       y="124.36218" />
+    <rect
+       style="fill:#548551;fill-opacity:1;stroke:none"
+       id="rect3002-6-7"
+       width="32"
+       height="32"
+       x="256"
+       y="124.36218" />
+    <rect
+       style="fill:#e43756;fill-opacity:1;stroke:none"
+       id="rect3002-85"
+       width="32"
+       height="32"
+       x="96"
+       y="156.36218" />
+    <rect
+       style="fill:#d8474b;fill-opacity:1;stroke:none"
+       id="rect3002-8-3"
+       width="32"
+       height="32"
+       x="128"
+       y="156.36218" />
+    <rect
+       style="fill:#e43845;fill-opacity:1;stroke:none"
+       id="rect3002-2-9"
+       width="32"
+       height="32"
+       x="160"
+       y="156.36218" />
+    <rect
+       style="fill:#d8474b;fill-opacity:1;stroke:none"
+       id="rect3002-6-5"
+       width="32"
+       height="32"
+       x="192"
+       y="156.36218" />
+    <rect
+       style="fill:#d8493c;fill-opacity:1;stroke:none"
+       id="rect3002-6-7-3"
+       width="32"
+       height="32"
+       x="256"
+       y="156.36218" />
+    <rect
+       style="fill:#0079ea;fill-opacity:1;stroke:none"
+       id="rect3002-85-9"
+       width="32"
+       height="32"
+       x="96"
+       y="188.36218" />
+    <rect
+       style="fill:#4179cb;fill-opacity:1;stroke:none"
+       id="rect3002-8-3-2"
+       width="32"
+       height="32"
+       x="128"
+       y="188.36218" />
+    <rect
+       style="fill:#6473ca;fill-opacity:1;stroke:none"
+       id="rect3002-2-9-1"
+       width="32"
+       height="32"
+       x="160"
+       y="188.36218" />
+    <rect
+       style="fill:#6b6ce3;fill-opacity:1;stroke:none"
+       id="rect3002-6-5-6"
+       width="32"
+       height="32"
+       x="192"
+       y="188.36218" />
+    <rect
+       style="fill:#6f71c8;fill-opacity:1;stroke:none"
+       id="rect3002-6-7-3-2"
+       width="32"
+       height="32"
+       x="256"
+       y="188.36218" />
+    <rect
+       style="fill:#448843;fill-opacity:1;stroke:none"
+       id="rect3002-6-7-1"
+       width="32"
+       height="32"
+       x="224"
+       y="124.36218" />
+    <rect
+       style="fill:#e43c33;fill-opacity:1;stroke:none"
+       id="rect3002-6-7-3-5"
+       width="32"
+       height="32"
+       x="224"
+       y="156.36218" />
+    <rect
+       style="fill:#6d6fd6;fill-opacity:1;stroke:none"
+       id="rect3002-6-7-3-2-0"
+       width="32"
+       height="32"
+       x="224"
+       y="188.36218" />
+    <rect
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="rect3002-1"
+       width="32"
+       height="32"
+       x="32"
+       y="124.36218" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect3002-1-2"
+       width="32"
+       height="32"
+       x="32"
+       y="156.36218" />
+    <rect
+       style="fill:#0000ff;fill-opacity:1;stroke:none"
+       id="rect3002-1-2-2"
+       width="32"
+       height="32"
+       x="32"
+       y="188.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+       x="286.91599"
+       y="75.718185"
+       id="text3820-6-0-8-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/sebastiaan/Documents/Research/Projects/P0014 [Pupil size and working memory]/P0014.1 [Pupil size and working memory]/experiments/__pool__/5.png"
+       inkscape:export-xdpi="147.5786"
+       inkscape:export-ydpi="147.5786"><tspan
+         sodipodi:role="line"
+         id="tspan3822-6-0-9-8"
+         x="286.91599"
+         y="75.718185"
+         style="font-size:24px;fill:#ffffff;stroke:#000000">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+       x="308.892"
+       y="75.718185"
+       id="text3820-6-0-8-5-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/sebastiaan/Documents/Research/Projects/P0014 [Pupil size and working memory]/P0014.1 [Pupil size and working memory]/experiments/__pool__/6.png"
+       inkscape:export-xdpi="147.5786"
+       inkscape:export-ydpi="147.5786"><tspan
+         sodipodi:role="line"
+         id="tspan3822-6-0-9-8-2"
+         x="308.892"
+         y="75.718185"
+         style="font-size:24px;fill:#ffffff;stroke:#000000">6</tspan></text>
   </g>
 </svg>
