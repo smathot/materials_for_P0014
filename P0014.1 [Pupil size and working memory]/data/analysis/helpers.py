@@ -22,13 +22,15 @@ from exparser import TraceKit as tk
 from exparser import Plot
 from exparser.TangoPalette import *
 from exparser.Cache import cachedDataMatrix
+from exparser.PivotMatrix import PivotMatrix
 from yamldoc import validate
 from matplotlib import pyplot as plt
+import warnings
 
 defaultTraceParams = {
-	'signal'		: 'retention',
+	'signal'		: 'pupil',
 	'lock'			: 'start',
-	'phase'			: 'trial',
+	'phase'			: 'retention',
 	'baseline'		: 'cue',
 	'baselineLock'	: 'end',
 	'traceLen'		: 5000
@@ -54,8 +56,11 @@ def filter(dm):
 		desc:	A DataMatrix.
 		type:	DataMatrix
 	"""
-	print dm.columns()
-	dm = dm.select('practice == "no"')
+
+	if 'no' in dm.unique('practice'):
+		dm = dm.select('practice == "no"')
+	else:
+		warnings.warn('This DataMatrix contains only practice trials!')
 	# Gaze error must be smaller than maximum displacement of stabilizer.
 	dm = dm.select('maxGazeErr < 1024/6')
 	return dm
@@ -90,3 +95,24 @@ def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix=''):
 	plt.plot(yBright, color=brightColor)
 	plt.plot(yDark, color=darkColor)
 	Plot.save('pupilTracePlot%s' % suffix, show=show)
+
+@validate
+def behavior(dm):
+
+	"""
+	desc:
+		Analyzes accuracy and response times.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+	"""
+
+	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct')
+	pm._print('Accuracy')
+	pm.save('output/correct.csv')
+
+	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='response_time')
+	pm._print('Response times')
+	pm.save('output/response_time.csv')
