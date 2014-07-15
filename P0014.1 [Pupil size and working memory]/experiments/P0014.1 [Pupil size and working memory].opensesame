@@ -347,7 +347,7 @@ define inline_script settings
 	w, h = exp.resolution()
 	vEcc = 92
 	hEcc = w/4
-	total_blocks = 8
+	total_blocks = 6
 	# Various durations, see `trial_*` scripts
 	preDriftDur = 995
 	postDriftDur = 995
