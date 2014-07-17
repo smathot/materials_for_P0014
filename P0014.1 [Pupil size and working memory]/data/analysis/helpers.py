@@ -36,7 +36,7 @@ defaultTraceParams = {
 	'traceLen'		: 5000
 	}
 
-show = '--silent' not in sys.argv
+show = '--show' in sys.argv
 brightColor = orange[1]
 darkColor = blue[1]
 
@@ -63,7 +63,25 @@ def filter(dm):
 		warnings.warn('This DataMatrix contains only practice trials!')
 	# Gaze error must be smaller than maximum displacement of stabilizer.
 	dm = dm.select('maxGazeErr < 1024/6')
+	dm = dm.select('response_time != ""')
 	return dm
+
+@validate
+def descriptives(dm):
+
+	"""
+	desc:
+		Provide some descriptives, such as cellcount, overall accuracy, etc.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+	"""
+
+	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct',
+		func='size')
+	pm._print('N')
 
 @validate
 def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix=''):
@@ -112,7 +130,6 @@ def behavior(dm):
 	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct')
 	pm._print('Accuracy')
 	pm.save('output/correct.csv')
-
 	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='response_time')
 	pm._print('Response times')
 	pm.save('output/response_time.csv')
