@@ -18,6 +18,7 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import sys
+import math
 from exparser import TraceKit as tk
 from exparser import Plot
 from exparser.TangoPalette import *
@@ -84,7 +85,8 @@ def descriptives(dm):
 	pm._print('N')
 
 @validate
-def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix=''):
+def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix='',
+	subplot=False):
 
 	"""
 	desc:
@@ -103,16 +105,56 @@ def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix=''):
 		suffix:
 			desc:	A suffix for the output files.
 			type:	str
+		subplot:
+			desc:	Indicates if the plot is a subplot of a bigger plot, in
+					which case no new figure is created and saved.
+			type:	bool
 	"""
 
 	dmBright = dm.select('targetLum == "bright"')
 	dmDark = dm.select('targetLum == "dark"')
 	xBright, yBright, errBright = tk.getTraceAvg(dmBright, **traceParams)
 	xDark, yDark, errDark = tk.getTraceAvg(dmDark, **traceParams)
-	Plot.new()
+	if not subplot:
+		Plot.new()
+	plt.fill_between(xBright, yBright-errBright[0], yBright+errBright[0],
+		color=brightColor, alpha = .25)
+	plt.fill_between(xDark, yDark-errDark[0], yDark+errDark[0],
+		color=darkColor, alpha = .25)
 	plt.plot(yBright, color=brightColor)
 	plt.plot(yDark, color=darkColor)
-	Plot.save('pupilTracePlot%s' % suffix, show=show)
+	if not subplot:
+		Plot.save('pupilTracePlot%s' % suffix, show=show)
+
+@validate
+def pupilTracePlotSubject(dm, traceParams=defaultTraceParams):
+
+	"""
+	desc:
+		Plots the pupil trace during the retention interval, separately for cue-
+		on-bright and cue-on-dark trials, and separately for each participant.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+
+	keywords:
+		traceParams:
+			desc:	The pupil-trace parameters.
+			type:	dict
+	"""
+
+	N = dm.count('subject_nr')
+	i = 1
+	Plot.new(Plot.xl)
+	for subject_nr in dm.unique('subject_nr'):
+		_dm = dm.select('subject_nr == %d' % subject_nr)
+		plt.subplot(math.ceil(N/3.), 3, i)
+		plt.title('subject %d (N=%d)' % (subject_nr, len(_dm)))
+		pupilTracePlot(_dm, subplot=True)
+		i += 1
+	Plot.save('pupilTracePlotSubject')
 
 @validate
 def behavior(dm):
@@ -130,6 +172,7 @@ def behavior(dm):
 	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct')
 	pm._print('Accuracy')
 	pm.save('output/correct.csv')
+
 	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='response_time')
 	pm._print('Response times')
 	pm.save('output/response_time.csv')

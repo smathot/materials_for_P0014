@@ -23,5 +23,6 @@ from analysis import helpers, parse
 Tools.analysisLoop(
 	parse.getDataMatrix(cacheId='data'),
 	mods=[helpers],
-	pre=['filter']
+	pre=['filter'],
+	full=['descriptives', 'behavior', 'pupilTracePlot'],
 	)

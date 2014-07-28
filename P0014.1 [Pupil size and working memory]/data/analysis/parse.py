@@ -17,6 +17,7 @@ You should have received a copy of the GNU General Public License
 along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 """
 
+import sys
 from exparser.EyelinkAscFolderReader import EyelinkAscFolderReader
 from exparser.Cache import cachedDataMatrix
 import numpy as np
@@ -57,7 +58,8 @@ class MyReader(EyelinkAscFolderReader):
 				type:	dict
 		"""
 
-		print trialDict['maxGazeErr']
+		sys.stdout.write('.')
+		sys.stdout.flush()
 		trialDict['meanStabShift'] = np.mean(self.stabShift)
 
 	def parseLine(self, trialDict, l):
