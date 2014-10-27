@@ -40,6 +40,7 @@ defaultTraceParams = {
 show = '--show' in sys.argv
 brightColor = orange[1]
 darkColor = blue[1]
+validExp = 'exp1', 'exp2' # Known experiment codes
 
 @validate
 def filter(dm):
@@ -58,6 +59,8 @@ def filter(dm):
 		type:	DataMatrix
 	"""
 
+	assert(exp in validExp)
+	print('Filtering for %s' % exp)
 	# The subject numbers do not match those deduced from the file names. So
 	# we need to fix this and assert that we have exactly 21 unique subject
 	# numbers
@@ -90,9 +93,16 @@ def descriptives(dm):
 			type:	DataMatrix
 	"""
 
-	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct',
-		func='size')
-	pm._print('N')
+	if exp == 'exp1':
+		pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct',
+			func='size')
+		pm._print('N')
+	elif exp == 'exp2':
+		for trialType in ['attention', 'memory']:
+			_dm = dm.select('trialType == "%s"' % trialType)
+			pm = PivotMatrix(_dm, ['subject_nr'], ['subject_nr'], dv='correct',
+				func='size')
+			pm._print('N (%s)' % trialType)
 
 @validate
 def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix='',
@@ -121,6 +131,8 @@ def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix='',
 			type:	bool
 	"""
 
+	if exp == 'exp2':
+		dm = dm.select('trialType == "memory"')
 	dmBright = dm.select('targetLum == "bright"')
 	dmDark = dm.select('targetLum == "dark"')
 	xBright, yBright, errBright = tk.getTraceAvg(dmBright, **traceParams)
@@ -179,10 +191,20 @@ def behavior(dm):
 			type:	DataMatrix
 	"""
 
-	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct')
-	pm._print('Accuracy')
-	pm.save('output/correct.csv')
-
-	pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='response_time')
-	pm._print('Response times')
-	pm.save('output/response_time.csv')
+	if exp == 'exp1':
+		pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct')
+		pm._print('Accuracy')
+		pm.save('output/correct.csv')
+		pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='response_time')
+		pm._print('Response times')
+		pm.save('output/response_time.csv')
+	elif exp == 'exp2':
+		for trialType in ['attention', 'memory']:
+			_dm = dm.select('trialType == "%s"' % trialType)
+			pm = PivotMatrix(_dm, ['subject_nr'], ['subject_nr'], dv='correct')
+			pm._print('Accuracy (%s)' % trialType)
+			pm.save('output/correct.%s.csv' % trialType)
+			pm = PivotMatrix(_dm, ['subject_nr'], ['subject_nr'],
+				dv='response_time')
+			pm._print('Response times (%s)' % trialType)
+			pm.save('output/response_time.%s.csv' % trialType)
