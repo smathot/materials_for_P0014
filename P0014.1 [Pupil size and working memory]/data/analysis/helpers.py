@@ -60,24 +60,6 @@ def filter(dm):
 	"""
 
 	assert(exp in validExp)
-	print('Filtering for %s' % exp)
-	# The subject numbers do not match those deduced from the file names. So
-	# we need to fix this and assert that we have exactly 21 unique subject
-	# numbers
-	for i in dm.range():
-		dm['subject_nr'][i] = int(dm['file'][i][7:-4])
-	for _dm in dm.group('file'):
-		print('file %s -> subject_nr %d' % (_dm['file'][0], \
-			_dm['subject_nr'][0]))
-	assert(dm.count('file') == dm.count('subject_nr'))
-	print('%d subjects' % dm.count('file'))
-	if 'no' in dm.unique('practice'):
-		dm = dm.select('practice == "no"')
-	else:
-		warnings.warn('This DataMatrix contains only practice trials!')
-	# Gaze error must be smaller than maximum displacement of stabilizer.
-	dm = dm.select('maxGazeErr < 1024/6')
-	dm = dm.select('response_time != ""')
 	return dm
 
 @validate
