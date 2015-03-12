@@ -41,6 +41,7 @@ show = '--show' in sys.argv
 brightColor = orange[1]
 darkColor = blue[1]
 validExp = 'exp1', 'exp2' # Known experiment codes
+colorClasses = 'red', 'green', 'blue'
 
 @validate
 def filter(dm):
@@ -65,14 +66,13 @@ def filter(dm):
 	# we need to fix this and assert that we have exactly 21 unique subject
 	# numbers
 	for i in dm.range():
-		dm['subject_nr'][i] = int(dm['file'][i][7:-4])
+		dm['subject_nr'][i] = int(dm['file'][i][2:4])
 	for _dm in dm.group('file'):
 		print('file %s -> subject_nr %d' % (_dm['file'][0], \
 			_dm['subject_nr'][0]))
-	assert(dm.count('file') == dm.count('subject_nr'))
 	print('%d subjects' % dm.count('file'))
 	if 'no' in dm.unique('practice'):
-		dm = dm.select('practice == "no"')
+		dm = dm.select('practice != "yes"')
 	else:
 		warnings.warn('This DataMatrix contains only practice trials!')
 	# Gaze error must be smaller than maximum displacement of stabilizer.
@@ -179,6 +179,64 @@ def pupilTracePlotSubject(dm, traceParams=defaultTraceParams):
 	Plot.save('pupilTracePlotSubject')
 
 @validate
+def pupilTracePlotCorrect(dm, traceParams=defaultTraceParams):
+
+	"""
+	desc:
+		Plots the pupil trace during the retention interval, separately for cue-
+		on-bright and cue-on-dark trials, and separately for correct and
+		incorrect trials.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+
+	keywords:
+		traceParams:
+			desc:	The pupil-trace parameters.
+			type:	dict
+	"""
+
+	Plot.new(Plot.w)
+	for correct in [0, 1]:
+		_dm = dm.select('correct == %d' % correct)
+		plt.subplot(2, 1, correct+1)
+		plt.title('Correct = %d (N=%d)' % (correct, len(_dm)))
+		pupilTracePlot(_dm, subplot=True)
+	Plot.save('pupilTraceCorrect')
+
+@validate
+def pupilTracePlotColorClassTarget(dm, traceParams=defaultTraceParams):
+
+	"""
+	desc:
+		Plots the pupil trace during the retention interval, separately for cue-
+		on-bright and cue-on-dark trials, and separately for different target
+		colors.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+
+	keywords:
+		traceParams:
+			desc:	The pupil-trace parameters.
+			type:	dict
+	"""
+
+	Plot.new(Plot.xl)
+	i = 1
+	for clrCls in colorClasses:
+		_dm = dm.select('clrClsTarget == "%s"' % clrCls)
+		plt.subplot(3, 1, i)
+		plt.title('Target color = %s (N=%d)' % (clrCls, len(_dm)))
+		pupilTracePlot(_dm, subplot=True)
+		i += 1
+	Plot.save('pupilTraceColorClassTarget')
+
+@validate
 def behavior(dm):
 
 	"""
@@ -208,3 +266,12 @@ def behavior(dm):
 				dv='response_time')
 			pm._print('Response times (%s)' % trialType)
 			pm.save('output/response_time.%s.csv' % trialType)
+			if trialType == 'attention':
+				pm = PivotMatrix(_dm, ['probePosTarget', 'attProbePos'],
+					['subject_nr'], dv='correct')
+				pm._print('Accuracy by position')
+				pm.save('output/correct.attention-by-position.csv')
+				pm = PivotMatrix(_dm, ['probePosTarget', 'attProbePos'],
+					['subject_nr'], dv='response_time')
+				pm._print('Response times by position')
+				pm.save('output/response_time.attention-by-position.csv')
