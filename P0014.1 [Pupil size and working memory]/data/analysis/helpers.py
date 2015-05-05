@@ -17,31 +17,7 @@ You should have received a copy of the GNU General Public License
 along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-import sys
-import math
-from exparser import TraceKit as tk
-from exparser import Plot
-from exparser.TangoPalette import *
-from exparser.Cache import cachedDataMatrix
-from exparser.PivotMatrix import PivotMatrix
-from yamldoc import validate
-from matplotlib import pyplot as plt
-import warnings
-
-defaultTraceParams = {
-	'signal'		: 'pupil',
-	'lock'			: 'start',
-	'phase'			: 'retention',
-	'baseline'		: 'cue',
-	'baselineLock'	: 'end',
-	'traceLen'		: 5000
-	}
-
-show = '--show' in sys.argv
-brightColor = orange[1]
-darkColor = blue[1]
-validExp = 'exp1', 'exp2' # Known experiment codes
-colorClasses = 'red', 'green', 'blue'
+from analysis.constants import *
 
 @validate
 def filter(dm):
@@ -62,6 +38,11 @@ def filter(dm):
 
 	assert(exp in validExp)
 	print('Filtering for %s' % exp)
+	if exp == 'exp2':
+		dm = dm.addField('attMatch', dtype=int, default=0)
+		i = (dm['trialType'] == 'attention') & \
+			(dm['attProbePos'] == dm['probePosTarget'])
+		dm['attMatch'][np.where(i)] = 1
 	# The subject numbers do not match those deduced from the file names. So
 	# we need to fix this and assert that we have exactly 21 unique subject
 	# numbers
@@ -106,7 +87,7 @@ def descriptives(dm):
 
 @validate
 def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix='',
-	subplot=False):
+	subplot=False, model=None, trialType='memory'):
 
 	"""
 	desc:
@@ -129,24 +110,26 @@ def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix='',
 			desc:	Indicates if the plot is a subplot of a bigger plot, in
 					which case no new figure is created and saved.
 			type:	bool
+		trialType:
+			desc:	The trial type to analyze. Only applicable to exp2.
+			type:	str
 	"""
 
 	if exp == 'exp2':
-		dm = dm.select('trialType == "memory"')
-	dmBright = dm.select('targetLum == "bright"')
-	dmDark = dm.select('targetLum == "dark"')
-	xBright, yBright, errBright = tk.getTraceAvg(dmBright, **traceParams)
-	xDark, yDark, errDark = tk.getTraceAvg(dmDark, **traceParams)
-	if not subplot:
-		Plot.new()
-	plt.fill_between(xBright, yBright-errBright[0], yBright+errBright[0],
-		color=brightColor, alpha = .25)
-	plt.fill_between(xDark, yDark-errDark[0], yDark+errDark[0],
-		color=darkColor, alpha = .25)
-	plt.plot(yBright, color=brightColor)
-	plt.plot(yDark, color=darkColor)
+		dm = dm.select('trialType == "%s"' % trialType)
+	tk.plotTraceContrast(dm, q1, q2, model=model, winSize=winSize,
+		cacheId='lmerTrace%s' % suffix, minSmp=1, **traceParams)
 	if not subplot:
 		Plot.save('pupilTracePlot%s' % suffix, show=show)
+
+def pupilTracePlotLmer(dm):
+
+	pupilTracePlot(dm, model=model, suffix='.lmer')
+
+def pupilTracePlotAttention(dm):
+
+	pupilTracePlot(dm, suffix='.attention', trialType='attention',
+		traceParams=attentionTraceParams)
 
 @validate
 def pupilTracePlotSubject(dm, traceParams=defaultTraceParams):
@@ -207,13 +190,13 @@ def pupilTracePlotCorrect(dm, traceParams=defaultTraceParams):
 	Plot.save('pupilTraceCorrect')
 
 @validate
-def pupilTracePlotColorClassTarget(dm, traceParams=defaultTraceParams):
+def pupilTracePlotColorClass(dm, traceParams=defaultTraceParams):
 
 	"""
 	desc:
 		Plots the pupil trace during the retention interval, separately for cue-
 		on-bright and cue-on-dark trials, and separately for different target
-		colors.
+		and distractor colors.
 
 	arguments:
 		dm:
@@ -228,13 +211,16 @@ def pupilTracePlotColorClassTarget(dm, traceParams=defaultTraceParams):
 
 	Plot.new(Plot.xl)
 	i = 1
-	for clrCls in colorClasses:
-		_dm = dm.select('clrClsTarget == "%s"' % clrCls)
-		plt.subplot(3, 1, i)
-		plt.title('Target color = %s (N=%d)' % (clrCls, len(_dm)))
-		pupilTracePlot(_dm, subplot=True)
-		i += 1
-	Plot.save('pupilTraceColorClassTarget')
+	for clrClsTarget in colorClasses:
+		for clrClsDist in colorClasses:
+			_dm = dm.select('clrClsTarget == "%s"' % clrClsTarget)
+			_dm = _dm.select('clrClsDist == "%s"' % clrClsDist)
+			plt.subplot(3, 3, i)
+			plt.title('Target: %s, Dist: %s (N=%d)' \
+				% (clrClsTarget, clrClsDist, len(_dm)))
+			pupilTracePlot(_dm, subplot=True)
+			i += 1
+	Plot.save('pupilTraceColorClass')
 
 @validate
 def behavior(dm):
@@ -267,11 +253,34 @@ def behavior(dm):
 			pm._print('Response times (%s)' % trialType)
 			pm.save('output/response_time.%s.csv' % trialType)
 			if trialType == 'attention':
-				pm = PivotMatrix(_dm, ['probePosTarget', 'attProbePos'],
+				_dmCor = _dm.select('correct == 1')
+				pm = PivotMatrix(_dm, ['attMatch'],
 					['subject_nr'], dv='correct')
-				pm._print('Accuracy by position')
-				pm.save('output/correct.attention-by-position.csv')
-				pm = PivotMatrix(_dm, ['probePosTarget', 'attProbePos'],
+				pm._print('Accuracy by attMatch')
+				pm.save('output/correct.attention-by-attMatch.csv')
+				pm = PivotMatrix(_dmCor, ['attMatch'],
 					['subject_nr'], dv='response_time')
-				pm._print('Response times by position')
-				pm.save('output/response_time.attention-by-position.csv')
+				pm._print('Response times by attMatch')
+				pm.save('output/response_time.attention-by-attMatch.csv')
+				cm = _dm.collapse(['attMatch', 'clrClsTarget'],
+					'correct')
+				cm.save('output/cm.correct.csv')
+				print(cm)
+				cm = _dmCor.collapse(['attMatch', 'clrClsTarget'],
+					'response_time')
+				cm.save('output/cm.rt.csv')
+				print(cm)
+
+def attentionStats(dm):
+
+	assert(exp == 'exp2')
+	_dm = dm.select('trialType == "attention"')
+	_dmCor = _dm
+	R = RBridge.R()
+	R.load(_dmCor)
+	lm = R.lmer('response_time ~ attMatch + (1+attMatch|subject_nr)')
+	print(lm)
+	lm = R.lmer('response_time ~ attMatch*clrClsTarget + (1+attMatch|subject_nr)')
+	print(lm)
+	lm = R.lmer('response_time ~ attMatch*clrClsTarget*clrClsDist + (1+attMatch|subject_nr)')
+	print(lm)
