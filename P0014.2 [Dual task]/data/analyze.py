@@ -19,8 +19,9 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from exparser import Tools
+from analysis import constants
+constants.exp = 'exp2'
 from analysis import helpers, parse, corr
-helpers.exp = 'exp2'
 Tools.analysisLoop(
 	parse.getDataMatrix(cacheId='data'),
 	mods=[helpers, corr],

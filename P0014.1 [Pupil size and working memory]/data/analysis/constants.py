@@ -21,15 +21,23 @@ import sys
 import math
 from exparser import TraceKit as tk
 from exparser import Plot
+from exparser.DataMatrix import DataMatrix
 from exparser.TangoPalette import *
-from exparser.Cache import cachedDataMatrix, cachedArray
+from exparser.Cache import cachedDataMatrix, cachedArray, cachedPickle
 from exparser.PivotMatrix import PivotMatrix
 from exparser import RBridge
 from yamldoc import validate
 from matplotlib import pyplot as plt
-from scipy.stats import linregress
+from scipy.stats import linregress, nanmedian, nanmean, ttest_1samp
 import warnings
 import numpy as np
+import os
+
+traceLen = 5000
+
+smoothParams = {
+	'windowLen' : 31
+	}
 
 defaultTraceParams = {
 	'signal'		: 'pupil',
@@ -37,7 +45,8 @@ defaultTraceParams = {
 	'phase'			: 'retention',
 	'baseline'		: 'cue',
 	'baselineLock'	: 'end',
-	'traceLen'		: 5000
+	'traceLen'		: traceLen,
+	'smoothParams'	: smoothParams
 	}
 
 attentionTraceParams = {
@@ -46,13 +55,14 @@ attentionTraceParams = {
 	'phase'			: 'preAttProbe',
 	'baseline'		: 'cue',
 	'baselineLock'	: 'end',
-	'traceLen'		: 5000
+	'traceLen'		: traceLen,
+	'smoothParams'	: smoothParams
 	}
 
 show = '--show' in sys.argv
 brightColor = orange[1]
 darkColor = blue[1]
-validExp = 'exp1', 'exp2' # Known experiment codes
+validExp = 'exp1', 'exp2', 'expX' # Known experiment codes
 colorClasses = 'red', 'green', 'blue'
 model = 'targetLum + (1+targetLum|subject_nr)'
 winSize = 10

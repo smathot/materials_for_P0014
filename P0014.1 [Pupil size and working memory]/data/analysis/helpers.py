@@ -19,7 +19,7 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 
 from analysis.constants import *
 
-@validate
+@cachedDataMatrix
 def filter(dm):
 
 	"""
@@ -37,6 +37,8 @@ def filter(dm):
 	"""
 
 	assert(exp in validExp)
+	if 'exp' not in dm.columns():
+		dm = dm.addField('exp', dtype=str, default=exp)
 	print('Filtering for %s' % exp)
 	if exp == 'exp2':
 		dm = dm.addField('attMatch', dtype=int, default=0)
@@ -44,19 +46,34 @@ def filter(dm):
 			(dm['attProbePos'] == dm['probePosTarget'])
 		dm['attMatch'][np.where(i)] = 1
 	# The subject numbers do not match those deduced from the file names. So
-	# we need to fix this and assert that we have exactly 21 unique subject
+	# we need to fix this and assert that we have exactly 30 unique subject
 	# numbers
 	for i in dm.range():
-		dm['subject_nr'][i] = int(dm['file'][i][2:4])
+		if dm['exp'][i] == 'exp1':
+			f = dm['file'][i]
+			f = os.path.splitext(f)[0]
+			dm['subject_nr'][i] = int(f[7:]) + 1000
+		else:
+			dm['subject_nr'][i] = int(dm['file'][i][2:4]) + 2000
 	for _dm in dm.group('file'):
 		print('file %s -> subject_nr %d' % (_dm['file'][0], \
 			_dm['subject_nr'][0]))
-	print('%d subjects' % dm.count('file'))
+	print('%d subjects' % dm.count('subject_nr'))
 	if 'no' in dm.unique('practice'):
 		dm = dm.select('practice != "yes"')
 	else:
 		warnings.warn('This DataMatrix contains only practice trials!')
+	# Numbers for results section
+	print('Experiment 1:')
+	dm1 = dm.select('exp == "exp1"')
+	dm1 = dm1.select('maxGazeErr < 1024/6')
+	dm1 = dm1.select('response_time != ""')
+	print('Experiment 2:')
+	dm2 = dm.select('exp == "exp2"')
+	dm2 = dm2.select('maxGazeErr < 1024/6')
+	dm2 = dm2.select('response_time != ""')
 	# Gaze error must be smaller than maximum displacement of stabilizer.
+	print('Overall:')
 	dm = dm.select('maxGazeErr < 1024/6')
 	dm = dm.select('response_time != ""')
 	return dm
@@ -74,153 +91,19 @@ def descriptives(dm):
 			type:	DataMatrix
 	"""
 
-	if exp == 'exp1':
+	if exp == 'expX':
+		dm = dm.select('trialType == "memory"')
+	if exp in ['exp1', 'expX']:
 		pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct',
 			func='size')
 		pm._print('N')
+		pm.save('output/cellcount.csv')
 	elif exp == 'exp2':
 		for trialType in ['attention', 'memory']:
 			_dm = dm.select('trialType == "%s"' % trialType)
 			pm = PivotMatrix(_dm, ['subject_nr'], ['subject_nr'], dv='correct',
 				func='size')
 			pm._print('N (%s)' % trialType)
-
-@validate
-def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix='',
-	subplot=False, model=None, trialType='memory'):
-
-	"""
-	desc:
-		Plots the pupil trace during the retention interval, separately for cue-
-		on-bright and cue-on-dark trials.
-
-	arguments:
-		dm:
-			desc:	A DataMatrix.
-			type:	DataMatrix
-
-	keywords:
-		traceParams:
-			desc:	The pupil-trace parameters.
-			type:	dict
-		suffix:
-			desc:	A suffix for the output files.
-			type:	str
-		subplot:
-			desc:	Indicates if the plot is a subplot of a bigger plot, in
-					which case no new figure is created and saved.
-			type:	bool
-		trialType:
-			desc:	The trial type to analyze. Only applicable to exp2.
-			type:	str
-	"""
-
-	if exp == 'exp2':
-		dm = dm.select('trialType == "%s"' % trialType)
-	tk.plotTraceContrast(dm, q1, q2, model=model, winSize=winSize,
-		cacheId='lmerTrace%s' % suffix, minSmp=1, **traceParams)
-	if not subplot:
-		Plot.save('pupilTracePlot%s' % suffix, show=show)
-
-def pupilTracePlotLmer(dm):
-
-	pupilTracePlot(dm, model=model, suffix='.lmer')
-
-def pupilTracePlotAttention(dm):
-
-	pupilTracePlot(dm, suffix='.attention', trialType='attention',
-		traceParams=attentionTraceParams)
-
-@validate
-def pupilTracePlotSubject(dm, traceParams=defaultTraceParams):
-
-	"""
-	desc:
-		Plots the pupil trace during the retention interval, separately for cue-
-		on-bright and cue-on-dark trials, and separately for each participant.
-
-	arguments:
-		dm:
-			desc:	A DataMatrix.
-			type:	DataMatrix
-
-	keywords:
-		traceParams:
-			desc:	The pupil-trace parameters.
-			type:	dict
-	"""
-
-	N = dm.count('subject_nr')
-	i = 1
-	Plot.new(Plot.xl)
-	for subject_nr in dm.unique('subject_nr'):
-		_dm = dm.select('subject_nr == %d' % subject_nr)
-		plt.subplot(math.ceil(N/3.), 3, i)
-		plt.title('subject %d (N=%d)' % (subject_nr, len(_dm)))
-		pupilTracePlot(_dm, subplot=True)
-		i += 1
-	Plot.save('pupilTracePlotSubject')
-
-@validate
-def pupilTracePlotCorrect(dm, traceParams=defaultTraceParams):
-
-	"""
-	desc:
-		Plots the pupil trace during the retention interval, separately for cue-
-		on-bright and cue-on-dark trials, and separately for correct and
-		incorrect trials.
-
-	arguments:
-		dm:
-			desc:	A DataMatrix.
-			type:	DataMatrix
-
-	keywords:
-		traceParams:
-			desc:	The pupil-trace parameters.
-			type:	dict
-	"""
-
-	Plot.new(Plot.w)
-	for correct in [0, 1]:
-		_dm = dm.select('correct == %d' % correct)
-		plt.subplot(2, 1, correct+1)
-		plt.title('Correct = %d (N=%d)' % (correct, len(_dm)))
-		pupilTracePlot(_dm, subplot=True)
-	Plot.save('pupilTraceCorrect')
-
-@validate
-def pupilTracePlotColorClass(dm, traceParams=defaultTraceParams):
-
-	"""
-	desc:
-		Plots the pupil trace during the retention interval, separately for cue-
-		on-bright and cue-on-dark trials, and separately for different target
-		and distractor colors.
-
-	arguments:
-		dm:
-			desc:	A DataMatrix.
-			type:	DataMatrix
-
-	keywords:
-		traceParams:
-			desc:	The pupil-trace parameters.
-			type:	dict
-	"""
-
-	Plot.new(Plot.xl)
-	i = 1
-	for clrClsTarget in colorClasses:
-		for clrClsDist in colorClasses:
-			_dm = dm.select('clrClsTarget == "%s"' % clrClsTarget)
-			_dm = _dm.select('clrClsDist == "%s"' % clrClsDist)
-			plt.subplot(3, 3, i)
-			plt.title('Target: %s, Dist: %s (N=%d)' \
-				% (clrClsTarget, clrClsDist, len(_dm)))
-			pupilTracePlot(_dm, subplot=True)
-			i += 1
-	Plot.save('pupilTraceColorClass')
 
 @validate
 def behavior(dm):
@@ -235,10 +118,15 @@ def behavior(dm):
 			type:	DataMatrix
 	"""
 
-	if exp == 'exp1':
+	if exp == 'expX':
+		dm = dm.select('trialType == "memory"')
+	if exp in ['exp1', 'expX']:
 		pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='correct')
 		pm._print('Accuracy')
 		pm.save('output/correct.csv')
+		pm = PivotMatrix(dm, ['clrClsTarget'], ['subject_nr'], dv='correct')
+		pm._print('Accuracy')
+		pm.save('output/correct.clrClsTarget.csv')
 		pm = PivotMatrix(dm, ['subject_nr'], ['subject_nr'], dv='response_time')
 		pm._print('Response times')
 		pm.save('output/response_time.csv')

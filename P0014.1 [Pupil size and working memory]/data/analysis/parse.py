@@ -21,6 +21,7 @@ import sys
 from exparser.EyelinkAscFolderReader import EyelinkAscFolderReader
 from exparser.Cache import cachedDataMatrix
 import numpy as np
+from analysis.constants import *
 
 # Display center
 xc = 512
@@ -90,4 +91,11 @@ class MyReader(EyelinkAscFolderReader):
 
 @cachedDataMatrix
 def getDataMatrix():
-	return MyReader(blinkReconstruct=True).dataMatrix()
+	if exp == 'expX':
+		dm1 = MyReader(path='data/exp1', blinkReconstruct=True).dataMatrix()
+		dm1 = dm1.addField('exp', dtype=str, default='exp1')
+		dm1 = dm1.addField('trialType', dtype=str, default='memory')
+		dm2 = MyReader(path='data/exp2', blinkReconstruct=True).dataMatrix()
+		dm2 = dm2.addField('exp', dtype=str, default='exp2')
+		return dm1 + dm2
+	return MyReader(path='data', blinkReconstruct=True).dataMatrix()
