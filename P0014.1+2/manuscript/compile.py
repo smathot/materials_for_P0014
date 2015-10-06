@@ -25,7 +25,7 @@ version = '1.1.1'
 build.path += ['svg', 'md', 'tbl']
 build.zoteroApiKey = myZoteroCredentials.zoteroApiKey
 build.zoteroLibraryId = myZoteroCredentials.zoteroLibraryId
-build.setStyle('modern')
+build.setStyle('apa')
 build.tableTemplate = 'pandoc'
 build.pdfHeader = 'Manuscript in preparation [v%s; %s; %s]' % (version, \
 	time.strftime('%c'), git.commitHash().decode())
