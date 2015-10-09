@@ -44,6 +44,7 @@ class MyReader(EyelinkAscFolderReader):
 		"""
 
 		trialDict['maxGazeErr'] = 0
+		trialDict['maxGazeDev'] = 0
 		trialDict['stabErr'] = 0
 		self.stabShift = []
 
@@ -81,8 +82,10 @@ class MyReader(EyelinkAscFolderReader):
 		if self.tracePhase == 'retention':
 			fix = self.toFixation(l)
 			if fix != None:
-				trialDict['maxGazeErr'] = max(trialDict['maxGazeErr'],
-					np.abs(xc-fix['x']))
+				dev = fix['x']-xc
+				if abs(dev) > trialDict['maxGazeErr']:
+					trialDict['maxGazeErr'] = np.abs(dev)
+					trialDict['maxGazeDev'] = dev
 			if 'stabilize' in l:
 				if l[3] == 'error':
 					trialDict['stabErr'] += 1

@@ -1,5 +1,5 @@
 ---
-title: "The pupillary light response reveals no evidence for attentional capture by the content of visual working memory (but maybe inhibition)"
+title: "Attention and inhibition of stimuli that match the content of visual working memory: Evidence from eye movements and pupillometry"
 author:
   Sebastiaan Mathôt^1^, Elle van Heusden^1^, and Stefan Van der Stigchel^2^
 affiliation:
@@ -20,7 +20,7 @@ correspondence:
 
 %-- include: "md/abstract.md" --%
 
-*Keywords: human-computer interface, brain-computer interface, pupillometry, covert visual attention*
+*Keywords: visual working memory, visual attention, pupillometry*
 
 ~
 
@@ -54,6 +54,6 @@ The authors declare no competing financial interests.
 
 # Author contributions
 
-JBM collected the data. SM wrote the first draft of the manuscript. SM and LvdL performed pilot testing. All authors contributed to the design of the experiment, and revision of the manuscript.
+EvdH collected the data. SM and EvdH analyzed the data. SM wrote the first draft of the manuscript. All authors contributed to the design of the experiment, and revision of the manuscript.
 
 ~

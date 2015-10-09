@@ -26,6 +26,10 @@ For regular trials, accuracy was 73.3% (SE = 1.6), and mean correct RT was 2.3 s
 
 %FigPupilTrace::b shows pupil size over time as a function of Probe Brightness (regular trials only). The results are very similar to those of Exp. 1. Crucially, we again found that the pupil was larger when the probe appeared on a bright, compared to a dark, background. This effect was reliable from 810 - 1220 ms.
 
+## Eye-movement results
+
+As in Exp. 1, we analyzed gaze deviation in the untrimmed data. A Bayesian t-test revealed strong evidence for a deviation toward the memory-match probe (BF = 27.0). (For reference, a classical one-sided paired-samples t-test revealed the same bias: t(14) = 3.5, p = .002)
+
 ### Discussion
 
-In Exp. 2, we again found no evidence that attention was biased toward the probe that matched the content of visual working memory. Rather, we observed the opposite pattern: When the memory-match probe was presented on a bright background, the pupil was larger than when it was presented on a dark background. This suggests that attention was biased away from, rather than toward, the memory-match probe.
+Exp. 2 was a near-perfect replication of Exp. 1. We again found that the eyes were initially drawn toward the probe that matched the content of visual working memory. And, again, we found no evidence for a sustained bias of attention toward the probe that matched the content of visual working memory. Rather, we observed the opposite pattern: When the memory-match probe was presented on a bright background, the pupil was larger than when it was presented on a dark background. Together, this suggests that the memory-match probe briefly captured attention, but was inhibited later in time.

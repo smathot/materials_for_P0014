@@ -91,6 +91,48 @@ def pupilTracePlotSubject(dm, traceParams=defaultTraceParams):
 	Plot.save('pupilTracePlotSubject')
 
 @validate
+def pupilTracePlotRT(dm, traceParams=defaultTraceParams):
+
+	"""
+	desc:
+		Plots the pupil trace during the retention interval, separately for cue-
+		on-bright and cue-on-dark trials, and separately for correct and
+		incorrect trials.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+
+	keywords:
+		traceParams:
+			desc:	The pupil-trace parameters.
+			type:	dict
+	"""
+
+	Plot.new(Plot.w)
+
+	dm = dm.select('correct == 1')
+	dm = dm.addField('_rt', dtype=float)
+	dm = dm.addField('rtx', dtype=float)
+	dm = dm.calcPerc('response_time', '_rt', keys=['subject_nr'], nBin=2)
+	dm['_rt'] /= 50
+	dm['rtx'] = dm['_rt']
+	print(dm.collapse(['_rt'], 'response_time'))
+	for i, _rt in [(1, 0), (2, 1)]:
+		_dm = dm.select('_rt == %d' % _rt)
+		plt.subplot(2, 1, i)
+		plt.title('RT = %d (N=%d)' % (_rt, len(_dm)))
+		pupilTracePlot(_dm, subplot=True, model=model,
+			suffix='.lmer.rt%s' % _rt)
+	Plot.save('pupilTraceRT')
+	_model = 'targetLum*rtx + (1+rtx+targetLum|subject_nr)'
+	_dm = dm.select('trialType == "memory"')
+	mm = tk.mixedModelTrace(_dm, _model, winSize=winSize,
+		cacheId='.lmer.rtGrand', **defaultTraceParams)
+	tk.statsTrace(mm)
+
+@validate
 def pupilTracePlotCorrect(dm, traceParams=defaultTraceParams):
 
 	"""
@@ -336,3 +378,13 @@ def sortedHeatmap(dm):
 		vmin=-.075, vmax=.075)
 	plt.colorbar()
 	Plot.save('heatmap')
+
+# def behavPupilLmer(dm):
+#
+# 	dm = dm.select('trialType == "memory"').select('correct == 1')
+# 	m = 'targetLum*response_time + (1+targetLum+response_time|subject_nr)'
+# 	dm['response_time'] /= dm['response_time'].std()
+# 	mm = tk.mixedModelTrace(dm, m, winSize=250, cacheId='behavPupilLmer',
+# 		**defaultTraceParams)
+# 	tk.statsTrace(mm)
+# 	plt.show()

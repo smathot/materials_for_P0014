@@ -56,6 +56,10 @@ figure:
   Pupil size over time as a function of Probe Brightness (Probe-on-Bright, Probe-on-Dark). a) Results from Experiment 1. b) Results from Experiment 2. Shadings indicate a reliable effect of Probe Brightness. Error bars indicate standard errors.
 --%
 
+## Eye-movement results
+
+On about 15% of trials, gaze deviated considerably from the display center; these trials were discarded for the main analyses (see Results: Trial-exclusion criteria). However, to test whether the eyes were drawn toward the memory-match probe, we analyzed the full, untrimmed data. For each trial, we determined the maximum gaze deviation from the center (positive values mean a deviation to the right). Next, we split the data by the location of the memory-match probe (Left, Right), and conducted a default one-sided Bayesian paired-samples t-test on the per-participant average gaze deviation [@Rouder2009; using JASP 0.7.1.32]. This revealed moderate evidence for a deviation toward the memory-match probe, compared to no systematic deviation (BF = 6.9). (For reference, a classical one-sided paired-samples t-test revealed the same bias: t(14) = 2.7, p = .009)
+
 ## Discussion
 
-In Exp. 1, we found no evidence that attention was biased toward the probe that matched the content of visual working memory; that is, when the memory-match probe appeared on a bright background, the pupil was not smaller than when it appeared on a dark background; rather, there was a tendency in the opposite direction.
+In Exp. 1, we found that the eyes were initially drawn toward the probe that matched the content of visual working memory. However, the pupillary data revealed no evidence for a sustained shift of attention toward the memory-match probe; that is, when the memory-match probe appeared on a bright background, the pupil was not smaller than when it appeared on a dark background; rather, there was a tendency in the opposite direction.

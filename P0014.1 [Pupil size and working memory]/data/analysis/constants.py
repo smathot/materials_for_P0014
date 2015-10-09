@@ -65,6 +65,6 @@ darkColor = blue[1]
 validExp = 'exp1', 'exp2', 'expX' # Known experiment codes
 colorClasses = 'red', 'green', 'blue'
 model = 'targetLum + (1+targetLum|subject_nr)'
-winSize = 10
+winSize = 250
 q1 = 'targetLum == "bright"'
 q2 = 'targetLum == "dark"'

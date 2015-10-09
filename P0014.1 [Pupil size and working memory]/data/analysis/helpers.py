@@ -72,10 +72,30 @@ def filter(dm):
 	dm2 = dm.select('exp == "exp2"')
 	dm2 = dm2.select('maxGazeErr < 1024/6')
 	dm2 = dm2.select('response_time != ""')
+	dm2 = dm2.select('trialType == "attention"')
 	# Gaze error must be smaller than maximum displacement of stabilizer.
 	print('Overall:')
-	dm = dm.select('maxGazeErr < 1024/6')
+	_dm = dm.select('trialType == "memory"')
+	pm = PivotMatrix(_dm, ['probePosTarget'], ['subject_nr'], dv='maxGazeDev')
+	print(pm)
+	pm.save('output/gazeDev-pre.csv')
+	_dm1 = _dm.select('exp == "exp1"')
+	RBridge.R().load(_dm1)
+	lm = RBridge.R().lmer('maxGazeDev ~ probePosTarget + (1+probePosTarget|subject_nr)')
+	print(lm)
+	lm.save('output/lmer.exp1.gazeDev-pre.csv')
+	_dm2 = _dm.select('exp == "exp2"')
+	RBridge.R().load(_dm2)
+	lm = RBridge.R().lmer('maxGazeDev ~ probePosTarget + (1+probePosTarget|subject_nr)')
+	print(lm)
+	lm.save('output/lmer.exp2.gazeDev-pre.csv')
+
 	dm = dm.select('response_time != ""')
+	dm = dm.select('maxGazeErr < 1024/6')
+	_dm = dm.select('trialType == "memory"')
+	pm = PivotMatrix(_dm, ['probePosTarget'], ['subject_nr'], dv='maxGazeDev')
+	print(pm)
+	pm.save('output/gazeDev-post.csv')
 	return dm
 
 @validate
@@ -161,14 +181,14 @@ def behavior(dm):
 
 def attentionStats(dm):
 
-	assert(exp == 'exp2')
+	assert(exp == 'exp2' or exp == 'expX')
 	_dm = dm.select('trialType == "attention"')
 	_dmCor = _dm
 	R = RBridge.R()
 	R.load(_dmCor)
 	lm = R.lmer('response_time ~ attMatch + (1+attMatch|subject_nr)')
 	print(lm)
-	lm = R.lmer('response_time ~ attMatch*clrClsTarget + (1+attMatch|subject_nr)')
-	print(lm)
-	lm = R.lmer('response_time ~ attMatch*clrClsTarget*clrClsDist + (1+attMatch|subject_nr)')
+	R.load(_dm)
+	lm = R.glmer('correct ~ attMatch + (1+attMatch|subject_nr)',
+		family='binomial')
 	print(lm)
