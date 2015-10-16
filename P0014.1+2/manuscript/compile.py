@@ -34,8 +34,8 @@ if '--snapshot' in sys.argv:
 	git.snapshot('md/__main__.md', msg=sys.argv[-1])
 else:
 	# build.DOC('md/__main__.md', 'latest-manuscript.doc')
-	build.ODT('md/__main__.md', 'latest-manuscript.odt')
-	# build.PDF('md/__main__.md', 'latest-manuscript.pdf', lineNumbers=False)
+	# build.ODT('md/__main__.md', 'latest-manuscript.odt')
+	build.PDF('md/__main__.md', 'latest-manuscript.pdf', lineNumbers=False)
 	# build.HTML('md/__main__.md', 'latest-manuscript.html')
 	# build.HTML('md/__main__.md', 'latest-manuscript.html', standalone=False)
 	# build.zoteroApiKey = None

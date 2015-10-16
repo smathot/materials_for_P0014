@@ -12,4 +12,4 @@ Next, we used default one-sided Bayesian paired-samples t-tests to test which mo
 
 First we compared the Attention-Toward and No-Attention-Bias models. This showed strong evidence in favor of the No-Attention-Bias model (BF = 16.8), suggesting that the lack of an effect in the predicted direction was not due to insufficient statistical power. Next we compared the Attention-Away and No-Attention-Bias models. This showed moderate evidence in favor of the Attention-Away model (BF = 8.7). (For reference, a classical one-sided paired-samples t-test also revealed an effect of Probe Brightness: t(29) = 2.7, p = .005)
 
-In summary, a Bayesian analysis reveals moderate evidence that, across the two experiments, attention was biased away from, rather than toward, the probe that matched the content of visual working memory.
+In summary, a Bayesian analysis revealed moderate evidence that, across the two experiments, there was a sustained attentional bias away from, rather than toward, the probe that matched the content of visual working memory.

@@ -18,6 +18,7 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from analysis.constants import *
+from analysis import gaze
 
 @cachedDataMatrix
 def filter(dm):
@@ -73,29 +74,11 @@ def filter(dm):
 	dm2 = dm2.select('maxGazeErr < 1024/6')
 	dm2 = dm2.select('response_time != ""')
 	dm2 = dm2.select('trialType == "attention"')
-	# Gaze error must be smaller than maximum displacement of stabilizer.
-	print('Overall:')
-	_dm = dm.select('trialType == "memory"')
-	pm = PivotMatrix(_dm, ['probePosTarget'], ['subject_nr'], dv='maxGazeDev')
-	print(pm)
-	pm.save('output/gazeDev-pre.csv')
-	_dm1 = _dm.select('exp == "exp1"')
-	RBridge.R().load(_dm1)
-	lm = RBridge.R().lmer('maxGazeDev ~ probePosTarget + (1+probePosTarget|subject_nr)')
-	print(lm)
-	lm.save('output/lmer.exp1.gazeDev-pre.csv')
-	_dm2 = _dm.select('exp == "exp2"')
-	RBridge.R().load(_dm2)
-	lm = RBridge.R().lmer('maxGazeDev ~ probePosTarget + (1+probePosTarget|subject_nr)')
-	print(lm)
-	lm.save('output/lmer.exp2.gazeDev-pre.csv')
-
+	gaze.gazeDev(dm, suffix='.pre')
 	dm = dm.select('response_time != ""')
 	dm = dm.select('maxGazeErr < 1024/6')
 	_dm = dm.select('trialType == "memory"')
-	pm = PivotMatrix(_dm, ['probePosTarget'], ['subject_nr'], dv='maxGazeDev')
-	print(pm)
-	pm.save('output/gazeDev-post.csv')
+	gaze.gazeDev(dm, suffix='.post')
 	return dm
 
 @validate
@@ -180,6 +163,16 @@ def behavior(dm):
 				print(cm)
 
 def attentionStats(dm):
+
+	"""
+	desc:
+		Performs statistics on the attention condition of Exp 2.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+	"""
 
 	assert(exp == 'exp2' or exp == 'expX')
 	_dm = dm.select('trialType == "attention"')
