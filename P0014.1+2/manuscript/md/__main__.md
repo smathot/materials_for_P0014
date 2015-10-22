@@ -1,7 +1,7 @@
 ---
 title: "Attention and inhibition of stimuli that match the content of visual working memory: Evidence from eye movements and pupillometry"
 author:
-  Sebastiaan Mathôt^1^, Elle van Heusden^1^, and Stefan Van der Stigchel^2^
+  Sebastiaan Mathôt^1^, Elle van Heusden^2^, and Stefan Van der Stigchel^2^
 affiliation:
   - ^1^ Aix-Marseille University, CNRS, LPC UMR 7290, Marseille, France
   - ^2^ Dept. of Experimental Psychology, Helmholtz Institute, Utrecht University, The Netherlands
@@ -20,7 +20,7 @@ correspondence:
 
 %-- include: "md/abstract.md" --%
 
-*Keywords: visual working memory, visual attention, pupillometry*
+*Keywords: visual working memory, visual attention, pupillometry, eye movements*
 
 ~
 
