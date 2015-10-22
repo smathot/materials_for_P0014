@@ -36,7 +36,7 @@ else:
 	# build.DOC('md/__main__.md', 'latest-manuscript.doc')
 	# build.ODT('md/__main__.md', 'latest-manuscript.odt')
 	build.PDF('md/__main__.md', 'latest-manuscript.pdf', lineNumbers=False)
-	# build.HTML('md/__main__.md', 'latest-manuscript.html')
+	build.HTML('md/__main__.md', 'latest-manuscript.html')
 	# build.HTML('md/__main__.md', 'latest-manuscript.html', standalone=False)
 	# build.zoteroApiKey = None
 	# build.setStyle('letter-classic')
