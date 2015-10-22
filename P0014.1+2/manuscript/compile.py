@@ -30,7 +30,7 @@ build.tableTemplate = 'pandoc'
 build.pdfHeader = 'Manuscript in preparation [v%s; %s; %s]' % (version, \
 	time.strftime('%c'), git.commitHash().decode())
 if '--snapshot' in sys.argv:
-	git.exportFormats = 'pdf', 'docx'
+	git.exportFormats = 'pdf', 'odt', 'doc'
 	git.snapshot('md/__main__.md', msg=sys.argv[-1])
 else:
 	# build.DOC('md/__main__.md', 'latest-manuscript.doc')
