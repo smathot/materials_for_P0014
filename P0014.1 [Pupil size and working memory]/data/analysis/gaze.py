@@ -65,3 +65,21 @@ def gazeDev(dm, suffix=''):
 		x = .5*edges[1:]+.5*edges[:-1]
 		plt.fill_between(x, y, color=blue[1])
 	Plot.save('maxGazeDev%s' % suffix)
+
+def gazeTracePlot(dm, suffix):
+
+	assert(exp == 'expX')
+	dm = dm.select('trialType == "memory"')
+	Plot.new(size=(4,4))
+	plt.axhline(512, color='black', linestyle=':')
+	plt.ylim(512-22, 512+22)
+	plt.yticks([512-35/2., 512, 512+35/2.], [-.5, 0, .5])
+	plt.xlabel('Time since cue offset (ms)')
+	plt.ylabel('Horizontal gaze position (deg.)')
+	tk.plotTraceContrast(dm, gq1, gq2, color1=purple[1], color2=brown[1],
+		label1='Memory-Match Left (N=%d)' % len(dm.select(gq1)),
+		label2='Memory-Match Right (N=%d)' % len(dm.select(gq2)),
+		model=gazeModel, cacheId='gazeTrace%s' % suffix,
+		winSize=winSize, **gazeParams)
+	plt.legend(frameon=False, loc='lower right')
+	Plot.save('gazePlot%s' % suffix)

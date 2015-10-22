@@ -20,7 +20,7 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 from analysis.constants import *
 from analysis import gaze
 
-@cachedDataMatrix
+# @cachedDataMatrix
 def filter(dm):
 
 	"""
@@ -75,10 +75,12 @@ def filter(dm):
 	dm2 = dm2.select('response_time != ""')
 	dm2 = dm2.select('trialType == "attention"')
 	gaze.gazeDev(dm, suffix='.pre')
+	gaze.gazeTracePlot(dm, suffix='.pre')
 	dm = dm.select('response_time != ""')
 	dm = dm.select('maxGazeErr < 1024/6')
 	_dm = dm.select('trialType == "memory"')
 	gaze.gazeDev(dm, suffix='.post')
+	gaze.gazeTracePlot(dm, suffix='.post')
 	return dm
 
 @validate

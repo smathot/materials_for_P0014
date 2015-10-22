@@ -212,6 +212,48 @@ def pupilTracePlotExp(dm, traceParams=defaultTraceParams):
 	Plot.save('pupilTraceExp.grand')
 
 @validate
+def pupilTracePlotCue(dm, traceParams=defaultTraceParams):
+
+	"""
+	desc:
+		Plots the pupil trace during the retention interval, separately for cue-
+		on-bright and cue-on-dark trials, and separately for cue 1 and 2.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+
+	keywords:
+		traceParams:
+			desc:	The pupil-trace parameters.
+			type:	dict
+	"""
+
+	assert(exp == 'expX')
+	# First create separate plots for the two experiments
+	Plot.new(size=(10,5))
+	plt.subplots_adjust(wspace=0)
+	i = 1
+	for memCue in [1, 2]:
+		_dm = dm.select('memCue == %d' % memCue)
+		plt.subplot(1, 2, i); i+= 1
+		plt.ylim(.91, 1.01)
+		plt.xticks(range(0, 4001, 1000))
+		if memCue == 2:
+			plt.gca().yaxis.set_ticklabels([])
+			plt.title('b) Remember second')
+		else:
+			plt.ylabel('Pupil size (norm.)')
+			plt.title('a) Remember first')
+		plt.xlabel('Time since cue offset (ms)')
+		plt.axhline(1, linestyle=':', color='black')
+		pupilTracePlot(_dm, subplot=True, model=model,
+			suffix='.lmer.cue%d' % memCue)
+		plt.legend(frameon=False, loc='lower right')
+	Plot.save('pupilTraceCue')
+
+@validate
 def pupilTracePlotColorClass(dm, suffix='', traceParams=defaultTraceParams):
 
 	"""

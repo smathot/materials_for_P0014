@@ -59,12 +59,23 @@ attentionTraceParams = {
 	'smoothParams'	: smoothParams
 	}
 
+gazeParams = {
+	'signal'		: 'x',
+	'lock'			: 'start',
+	'phase'			: 'retention',
+	'traceLen'		: traceLen,
+	'smoothParams'	: smoothParams
+	}
+
 show = '--show' in sys.argv
 brightColor = orange[1]
 darkColor = blue[1]
 validExp = 'exp1', 'exp2', 'expX' # Known experiment codes
 colorClasses = 'red', 'green', 'blue'
 model = 'targetLum + (1+targetLum|subject_nr)'
-winSize = 250
+gazeModel = 'probePosTarget + (1+probePosTarget|subject_nr)'
+winSize = 10
 q1 = 'targetLum == "bright"'
 q2 = 'targetLum == "dark"'
+gq1 = 'probePosTarget == "left"'
+gq2 = 'probePosTarget == "right"'
