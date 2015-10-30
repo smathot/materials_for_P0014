@@ -1,5 +1,5 @@
 ---
-title: "Attention and inhibition of stimuli that match the content of visual working memory: Evidence from eye movements and pupillometry"
+title: "Attending and inhibiting stimuli that match the contents of visual working memory: Evidence from eye movements and pupillometry"
 author:
   Sebastiaan Mathôt^1^, Elle van Heusden^2^, and Stefan Van der Stigchel^2^
 affiliation:

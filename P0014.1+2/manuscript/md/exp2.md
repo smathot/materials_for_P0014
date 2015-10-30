@@ -2,7 +2,7 @@ In Exp. 1, the memory-match probe was task-irrelevant and presented in periphera
 
 ## Methods
 
-The methods were similar to those of Exp. 1 with the following differences. Fifteen participants were recruited (7 women; age range 18-26; normal or normal-to corrected vision). Stimuli were presented on a 24" LG 24MB65PM monitor (1280 x 800 px, 60 Hz). Because of the monitor change, stimuli were scaled by 95% (i.e. slightly smaller) compared with Exp. 1. One out of every nine trials was a catch trial, in which the probes abruptly changed to patches of white noise at an unpredictable moment during the retention interval. One probe changed 83 ms before the other probe, and the participant indicated which probe changed first by pressing the right (right first) or left (left first) key. The experiment was conducted in two sessions on separate days. Each session consisted of 27 practice trials, followed by 82 experimental trials, and took ±1 h.
+The methods were similar to those of Exp. 1 with the following differences. Fifteen participants were recruited (7 women; age range 18-26; normal or normal-to corrected vision). Stimuli were presented on a 24" LG 24MB65PM monitor (1280 x 800 px, 60 Hz). Because of the monitor change, stimuli were scaled by 95% (i.e. slightly smaller) compared with Exp. 1. One of every nine trials was a catch trial, in which the probes abruptly changed to patches of white noise at an unpredictable moment during the retention interval. One probe changed 83 ms before the other probe, and the participant indicated which probe changed first by pressing the right (right first) or left (left first) key. The experiment was conducted in two sessions on separate days. Each session consisted of 27 practice trials, followed by 82 experimental trials, and took ±1 h.
 
 ## Results
 
@@ -16,12 +16,12 @@ For regular trials, accuracy was 73.3% (SE = 1.6), and mean correct RT was 2.3 s
 
 ### Eye-movement results
 
-As in Exp. 1, we analyzed gaze deviation in the untrimmed data. A Bayesian t-test revealed strong evidence for a deviation toward the memory-match probe (BF = 27.0; see also %FigGazeDev::b). (For reference, a classical one-sided paired-samples t-test revealed the same bias: t(14) = 3.5, p = .002)
+As in Exp. 1, we analyzed gaze deviation in the untrimmed data. We again found that the eyes were briefly captured by the memory-match probe at the start of the retention interval (240 - 649 ms; %FigGazeDev::b,d).
 
 ### Pupil-size results
 
-%FigPupilTrace::b shows pupil size over time as a function of Probe Brightness (regular trials only). The results were very similar to those of Exp. 1. Crucially, we again found that the pupil was larger when the probe appeared on a bright, compared to a dark, background. This effect was reliable from 810 - 1220 ms.
+%FigPupilTrace::b shows pupil size over time as a function of Probe Brightness (regular trials only). The results were very similar to those of Exp. 1. Crucially, we again found that the pupil was larger when the probe appeared on a bright, compared to a dark, background. This effect was reliable from 810 - 1220 ms (criterion: t > 2 for at least 200 ms).
 
 ## Discussion
 
-Exp. 2 replicated the key results of Exp. 1. We again found that the eyes were initially captured by the probe that matched the content of visual working memory (memory-match probe). However, again, we found no evidence for a sustained bias of attention toward the memory-match probe. Rather, we observed the opposite pattern: When the memory-match probe was presented on a bright background, the pupil was larger than when it was presented on a dark background. Together, these findings suggest that the memory-match probe briefly captured attention, but that attention was biased away from it later in time.
+Exp. 2 replicated the key results of Exp. 1. We again found that, at the start of the retention interval, the eyes were captured by the probe that matched the content of visual working memory (memory-match probe). However, again, we found no evidence for a sustained bias of attention toward the memory-match probe. Rather, we observed the opposite pattern: When the memory-match probe was presented on a bright background, the pupil was larger than when it was presented on a dark background.
