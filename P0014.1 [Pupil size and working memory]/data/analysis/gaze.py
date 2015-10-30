@@ -45,10 +45,10 @@ def gazeDev(dm, suffix=''):
 		if _exp == 'exp2':
 			ecc *= .95
 			plt.gca().yaxis.set_ticklabels([])
-			plt.title('b) Experiment 2')
+			plt.title('d) Max. horiz. gaze dev. (Exp. 2)')
 		else:
 			plt.ylabel('Frequency (norm.)')
-			plt.title('a) Experiment 1')
+			plt.title('c) Max. horiz. gaze dev. (Exp. 1)')
 		plt.xticks([-256, 0, 256], [
 			'Distractor probe\n-%.1f' % ecc,
 			'Center\n0',
@@ -66,14 +66,16 @@ def gazeDev(dm, suffix=''):
 		plt.fill_between(x, y, color=blue[1])
 	Plot.save('maxGazeDev%s' % suffix)
 
-def gazeTracePlot(dm, suffix):
+def gazeTracePlot(dm, suffix, subplot=False):
 
 	assert(exp == 'expX')
 	dm = dm.select('trialType == "memory"')
-	Plot.new(size=(4,4))
+	if not subplot:
+		Plot.new(size=(4,4))
 	plt.axhline(512, color='black', linestyle=':')
-	plt.ylim(512-22, 512+22)
 	plt.yticks([512-35/2., 512, 512+35/2.], [-.5, 0, .5])
+	plt.ylim(512-35*.9, 512+35*.9)
+	# plt.yticks([512-35*.75, 512, 512+35*.75], [-.75, 0, .75])
 	plt.xlabel('Time since cue offset (ms)')
 	plt.ylabel('Horizontal gaze position (deg.)')
 	tk.plotTraceContrast(dm, gq1, gq2, color1=purple[1], color2=brown[1],
@@ -82,4 +84,5 @@ def gazeTracePlot(dm, suffix):
 		model=gazeModel, cacheId='gazeTrace%s' % suffix,
 		winSize=winSize, **gazeParams)
 	plt.legend(frameon=False, loc='lower right')
-	Plot.save('gazePlot%s' % suffix)
+	if not subplot:
+		Plot.save('gazePlot%s' % suffix)

@@ -74,7 +74,30 @@ def filter(dm):
 	dm2 = dm2.select('maxGazeErr < 1024/6')
 	dm2 = dm2.select('response_time != ""')
 	dm2 = dm2.select('trialType == "attention"')
+
+	# Gaze plot by Experiment
+	Plot.new(size=(10,5))
+	plt.subplots_adjust(wspace=0)
+	i = 1
+	for _exp in ['exp1', 'exp2']:
+		_dm = dm.select('exp == "%s"' % _exp)
+		plt.subplot(1, 2, i); i+= 1
+		plt.ylim(.91, 1.01)
+		plt.xticks(range(0, 4001, 1000))
+		gaze.gazeTracePlot(_dm, subplot=True, suffix='.lmer.%s' % _exp)
+		if _exp == 'exp2':
+			plt.gca().yaxis.set_ticklabels([])
+			plt.title('b) Horiz. gaze pos. over time (Exp. 2)')
+		else:
+			plt.ylabel('Pupil size (norm.)')
+			plt.title('a) Horiz. gaze pos. over time (Exp. 1)')
+		plt.xlabel('Time since cue offset (ms)')
+		plt.axhline(1, linestyle=':', color='black')
+		plt.legend(frameon=False, loc='lower right')
+	Plot.save('gazeTraceExp')
 	gaze.gazeDev(dm, suffix='.pre')
+	gaze.gazeDev(dm.select('memCue == 1'), suffix='.pre.memCue1')
+	gaze.gazeDev(dm.select('memCue == 2'), suffix='.pre.memCue2')
 	gaze.gazeTracePlot(dm, suffix='.pre')
 	dm = dm.select('response_time != ""')
 	dm = dm.select('maxGazeErr < 1024/6')
