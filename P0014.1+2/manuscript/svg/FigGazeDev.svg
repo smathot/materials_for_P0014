@@ -43,8 +43,8 @@
      id="namedview947"
      showgrid="true"
      inkscape:zoom="0.7333333"
-     inkscape:cx="438.89182"
-     inkscape:cy="367.45864"
+     inkscape:cx="554.39659"
+     inkscape:cy="323.94369"
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -53,7 +53,8 @@
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-bbox-midpoints="true">
+     inkscape:snap-bbox-midpoints="true"
+     showguides="false">
     <inkscape:grid
        type="xygrid"
        id="grid10254" />
@@ -986,425 +987,241 @@
       </g>
     </g>
     <g
-       transform="translate(193.09093,-623.04546)"
+       id="ytick_1"
        style="stroke-linecap:butt;stroke-linejoin:round"
-       id="matplotlib.axis_2">
+       transform="translate(193.09093,-623.04546)">
       <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="ytick_1">
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="line2d_15">
-          <defs
-             id="defs6876">
-            <path
-               inkscape:connector-curvature="0"
-               d="M 0,0 4,0"
-               id="m728421d6d4"
-               style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round" />
-          </defs>
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             id="g6879">
-            <use
-               height="100%"
-               width="100%"
-               style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
-               x="108"
-               xlink:href="#m728421d6d4"
-               y="246"
-               id="use6881" />
-          </g>
-        </g>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="line2d_16">
-          <defs
-             id="defs6884">
-            <path
-               inkscape:connector-curvature="0"
-               d="M 0,0 -4,0"
-               id="mcb0005524f"
-               style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round" />
-          </defs>
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             id="g6887">
-            <use
-               height="100%"
-               width="100%"
-               style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
-               x="378"
-               xlink:href="#mcb0005524f"
-               y="246"
-               id="use6889" />
-          </g>
-        </g>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="text_7">
-          <!-- -0.5 -->
-          <defs
-             id="defs6892">
-            <path
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               inkscape:connector-curvature="0"
-               d="m 51.4219,22.4062 q 0,-5.1718 -1.5625,-9.4687 Q 48.2969,8.64062 45.2188,5.53125 42.1406,2.4375 37.5781,0.71875 33.0156,-0.984375 27,-0.984375 q -5.4219,0 -9.4531,1.265625 -4.0157,1.28125 -6.8125,3.5 Q 7.95312,6 6.3125,8.98438 4.6875,11.9688 4,15.375 l 8.8906,1.0312 q 0.5313,-1.9531 1.5,-3.7812 0.9844,-1.8281 2.6719,-3.28125 1.6875,-1.4375 4.1563,-2.29687 2.4687,-0.84376 5.9843,-0.84376 3.4063,0 6.1875,1.04688 2.7969,1.04688 4.7656,3.0938 1.9844,2.0624 3.0469,5.0312 1.0781,2.9844 1.0781,6.8438 0,3.1718 -1.0312,5.8281 -1.0156,2.6719 -2.9219,4.5937 -1.9062,1.9375 -4.6719,3 -2.75,1.0782 -6.2656,1.0782 -2.1875,0 -4.0468,-0.3907 -1.8594,-0.3906 -3.4532,-1.0781 -1.5781,-0.6719 -2.875,-1.5781 -1.2968,-0.9063 -2.4218,-1.8907 l -8.5938,0 2.29688,37.0157 39.10932,0 0,-7.4688 -31.0937,0 L 14.9844,39.5 q 2.3437,1.8125 5.8594,3.0938 3.5156,1.2968 8.3593,1.2968 5.125,0 9.2188,-1.5625 4.1093,-1.5625 6.9843,-4.4219 2.8907,-2.8437 4.4532,-6.7968 1.5625,-3.9532 1.5625,-8.7032"
-               id="LiberationSans-35" />
-            <path
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               inkscape:connector-curvature="0"
-               d="m 4.4375,22.6562 0,7.8126 24.4219,0 0,-7.8126 z"
-               id="LiberationSans-2d" />
-            <path
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               inkscape:connector-curvature="0"
-               d="m 9.125,0 0,10.6875 9.5312,0 0,-10.6875 z"
-               id="LiberationSans-2e" />
-          </defs>
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             transform="matrix(0.1,0,0,-0.1,87.632812,248.58594)"
-             id="g6897">
-            <use
-               height="100%"
-               width="100%"
-               y="0"
-               x="0"
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               xlink:href="#LiberationSans-2d"
-               id="use6899" />
-            <use
-               height="100%"
-               width="100%"
-               y="0"
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               x="33.300781"
-               xlink:href="#LiberationSans-30"
-               id="use6901" />
-            <use
-               height="100%"
-               width="100%"
-               y="0"
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               x="88.916016"
-               xlink:href="#LiberationSans-2e"
-               id="use6903" />
-            <use
-               height="100%"
-               width="100%"
-               y="0"
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               x="116.69922"
-               xlink:href="#LiberationSans-35"
-               id="use6905" />
-          </g>
-        </g>
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="ytick_2">
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="line2d_17">
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             id="g6909">
-            <use
-               height="100%"
-               width="100%"
-               style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
-               x="108"
-               xlink:href="#m728421d6d4"
-               y="171"
-               id="use6911" />
-          </g>
-        </g>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="line2d_18">
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             id="g6914">
-            <use
-               height="100%"
-               width="100%"
-               style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
-               x="378"
-               xlink:href="#mcb0005524f"
-               y="171"
-               id="use6916" />
-          </g>
-        </g>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="text_8">
-          <!-- 0 -->
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             transform="matrix(0.1,0,0,-0.1,99.220313,173.58594)"
-             id="g6919">
-            <use
-               height="100%"
-               width="100%"
-               y="0"
-               x="0"
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               xlink:href="#LiberationSans-30"
-               id="use6921" />
-          </g>
-        </g>
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="ytick_3">
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="line2d_19">
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             id="g6925">
-            <use
-               height="100%"
-               width="100%"
-               style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
-               x="108"
-               xlink:href="#m728421d6d4"
-               y="96"
-               id="use6927" />
-          </g>
-        </g>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="line2d_20">
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             id="g6930">
-            <use
-               height="100%"
-               width="100%"
-               style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
-               x="378"
-               xlink:href="#mcb0005524f"
-               y="96"
-               id="use6932" />
-          </g>
-        </g>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           id="text_9">
-          <!-- 0.5 -->
-          <g
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             transform="matrix(0.1,0,0,-0.1,90.909375,98.585937)"
-             id="g6935">
-            <use
-               height="100%"
-               width="100%"
-               y="0"
-               x="0"
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               xlink:href="#LiberationSans-30"
-               id="use6937" />
-            <use
-               height="100%"
-               width="100%"
-               y="0"
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               x="55.615234"
-               xlink:href="#LiberationSans-2e"
-               id="use6939" />
-            <use
-               height="100%"
-               width="100%"
-               y="0"
-               style="stroke-linecap:butt;stroke-linejoin:round"
-               x="83.398438"
-               xlink:href="#LiberationSans-35"
-               id="use6941" />
-          </g>
-        </g>
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="text_10">
-        <!-- Pupil size (norm.) -->
+         id="line2d_15"
+         style="stroke-linecap:butt;stroke-linejoin:round">
         <defs
-           id="defs6944">
+           id="defs6876">
           <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 6.9375,0 0,40.5312 q 0,1.6563 -0.03125,3.3907 -0.01563,1.7343 -0.07813,3.3437 -0.04687,1.6094 -0.09374,3.0156 -0.04688,1.4219 -0.09376,2.5469 l 8.29688,0 q 0.0469,-1.125 0.125,-2.5625 0.0781,-1.4375 0.1406,-2.9531 0.0781,-1.5156 0.0938,-2.9063 0.0312,-1.3906 0.0312,-2.3593 l 0.2031,0 q 0.9219,3.0156 1.9688,5.2343 1.0625,2.2344 2.4688,3.6719 1.4218,1.4375 3.375,2.1407 1.9531,0.7187 4.7343,0.7187 1.0781,0 2.0469,-0.1719 0.9844,-0.1718 1.5156,-0.3125 l 0,-8.0625 q -0.875,0.25 -2.0468,0.3594 -1.1719,0.125 -2.6407,0.125 -3.0312,0 -5.1562,-1.375 -2.125,-1.3594 -3.4688,-3.7812 Q 17,38.1875 16.3594,34.8438 15.7188,31.5 15.7188,27.5469 L 15.7188,0 Z"
-             id="LiberationSans-72" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 2.39062,0 0,6.6875 32.28128,39.3594 -30.32815,0 0,6.7812 40.23435,0 0,-6.6875 L 12.25,6.78125 l 34.1406,0 0,-6.78125 z"
-             id="LiberationSans-7a" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 51.4219,26.6562 q 0,-6 -0.9844,-11.0781 -0.9687,-5.0781 -3.25,-8.74998 -2.2656,-3.65624 -6,-5.73437 -3.7344,-2.078125 -9.2031,-2.078125 -5.6719,0 -9.9219,2.156255 -4.2344,2.15624 -6.4844,7.03124 l -0.25,0 Q 15.375,8.10938 15.4062,7.32812 15.4375,6.54688 15.4531,5.375 15.4844,4.20312 15.5,2.75 15.5312,1.3125 15.5312,-0.09375 l 0,-20.65625 -8.79682,0 0,62.7969 q 0,1.9062 -0.03126,3.6562 Q 6.6875,47.4688 6.64062,48.9062 6.59375,50.3438 6.54688,51.3594 6.5,52.3906 6.45312,52.8281 l 8.48438,0 q 0.0469,-0.1406 0.125,-1.0312 0.0781,-0.875 0.1406,-2.125 0.0781,-1.2344 0.1563,-2.6563 0.0781,-1.4062 0.0781,-2.6718 l 0.1875,0 q 1.2188,2.5312 2.7812,4.3124 1.5626,1.7813 3.5626,2.9219 2,1.1563 4.4687,1.6719 2.4687,0.5156 5.5469,0.5156 5.4687,0 9.2031,-1.9531 3.7344,-1.9531 6,-5.5 2.2813,-3.5313 3.25,-8.5469 0.9844,-5 0.9844,-11.1094 m -9.2344,-0.1874 q 0,4.875 -0.5937,8.6874 -0.5782,3.8126 -2.0157,6.4376 -1.4375,2.6406 -3.8437,4 -2.3906,1.375 -6,1.375 -2.9219,0 -5.5156,-0.8282 Q 21.625,45.3125 19.7031,42.9688 17.7812,40.625 16.6562,36.5 q -1.125,-4.125 -1.125,-10.7188 0,-5.6093 0.9219,-9.5 0.9375,-3.875 2.7188,-6.2656 1.7812,-2.3906 4.4062,-3.4531 2.6407,-1.04688 6.0625,-1.04688 3.6563,0 6.0782,1.40626 2.4218,1.42187 3.8593,4.10932 1.4375,2.6876 2.0157,6.5626 0.5937,3.8906 0.5937,8.875"
-             id="LiberationSans-70" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 61.4219,48.0938 q 0,-4.4844 -1.4844,-8.375 Q 58.4531,35.8438 55.5,32.9844 52.5469,30.125 48.0938,28.4688 43.6562,26.8125 37.75,26.8125 l -20.2188,0 0,-26.8125 -9.32808,0 0,68.7969 28.95308,0 q 6.1094,0 10.6407,-1.4844 4.5469,-1.4844 7.5781,-4.2031 3.0312,-2.7032 4.5312,-6.5469 1.5157,-3.8281 1.5157,-8.4687 M 52.0469,48 q 0,6.5469 -4,9.9375 -4,3.3906 -12.0157,3.3906 l -18.5,0 0,-27.1406 18.8907,0 q 8.0625,0 11.8437,3.5625 3.7813,3.5625 3.7813,10.25"
-             id="LiberationSans-50" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 6.73438,0 0,72.4688 8.79682,0 0,-72.4688 z"
-             id="LiberationSans-6c" />
+             style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
+             id="m728421d6d4"
+             d="M 0,0 4,0"
+             inkscape:connector-curvature="0" />
         </defs>
         <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           transform="matrix(0,-0.1,-0.1,0,80.557812,209.58672)"
-           id="g6951">
+           id="g6879"
+           style="stroke-linecap:butt;stroke-linejoin:round">
           <use
-             height="100%"
+             id="use6881"
+             y="246"
+             xlink:href="#m728421d6d4"
+             x="108"
+             style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
              width="100%"
-             y="0"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="line2d_16"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <defs
+           id="defs6884">
+          <path
+             style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
+             id="mcb0005524f"
+             d="M 0,0 -4,0"
+             inkscape:connector-curvature="0" />
+        </defs>
+        <g
+           id="g6887"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             id="use6889"
+             y="246"
+             xlink:href="#mcb0005524f"
+             x="378"
+             style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="text_7"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <!-- -0.5 -->
+        <defs
+           id="defs6892">
+          <path
+             id="LiberationSans-35"
+             d="m 51.4219,22.4062 q 0,-5.1718 -1.5625,-9.4687 Q 48.2969,8.64062 45.2188,5.53125 42.1406,2.4375 37.5781,0.71875 33.0156,-0.984375 27,-0.984375 q -5.4219,0 -9.4531,1.265625 -4.0157,1.28125 -6.8125,3.5 Q 7.95312,6 6.3125,8.98438 4.6875,11.9688 4,15.375 l 8.8906,1.0312 q 0.5313,-1.9531 1.5,-3.7812 0.9844,-1.8281 2.6719,-3.28125 1.6875,-1.4375 4.1563,-2.29687 2.4687,-0.84376 5.9843,-0.84376 3.4063,0 6.1875,1.04688 2.7969,1.04688 4.7656,3.0938 1.9844,2.0624 3.0469,5.0312 1.0781,2.9844 1.0781,6.8438 0,3.1718 -1.0312,5.8281 -1.0156,2.6719 -2.9219,4.5937 -1.9062,1.9375 -4.6719,3 -2.75,1.0782 -6.2656,1.0782 -2.1875,0 -4.0468,-0.3907 -1.8594,-0.3906 -3.4532,-1.0781 -1.5781,-0.6719 -2.875,-1.5781 -1.2968,-0.9063 -2.4218,-1.8907 l -8.5938,0 2.29688,37.0157 39.10932,0 0,-7.4688 -31.0937,0 L 14.9844,39.5 q 2.3437,1.8125 5.8594,3.0938 3.5156,1.2968 8.3593,1.2968 5.125,0 9.2188,-1.5625 4.1093,-1.5625 6.9843,-4.4219 2.8907,-2.8437 4.4532,-6.7968 1.5625,-3.9532 1.5625,-8.7032"
+             inkscape:connector-curvature="0"
+             style="stroke-linecap:butt;stroke-linejoin:round" />
+          <path
+             id="LiberationSans-2d"
+             d="m 4.4375,22.6562 0,7.8126 24.4219,0 0,-7.8126 z"
+             inkscape:connector-curvature="0"
+             style="stroke-linecap:butt;stroke-linejoin:round" />
+          <path
+             id="LiberationSans-2e"
+             d="m 9.125,0 0,10.6875 9.5312,0 0,-10.6875 z"
+             inkscape:connector-curvature="0"
+             style="stroke-linecap:butt;stroke-linejoin:round" />
+        </defs>
+        <g
+           id="g6897"
+           transform="matrix(0.1,0,0,-0.1,87.632812,248.58594)"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             id="use6899"
+             xlink:href="#LiberationSans-2d"
+             style="stroke-linecap:butt;stroke-linejoin:round"
              x="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             xlink:href="#LiberationSans-50"
-             id="use6953" />
-          <use
-             height="100%"
-             width="100%"
              y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="66.699219"
-             xlink:href="#LiberationSans-75"
-             id="use6955" />
-          <use
-             height="100%"
              width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="122.31445"
-             xlink:href="#LiberationSans-70"
-             id="use6957" />
+             height="100%" />
           <use
-             height="100%"
-             width="100%"
-             y="0"
+             id="use6901"
+             xlink:href="#LiberationSans-30"
+             x="33.300781"
              style="stroke-linecap:butt;stroke-linejoin:round"
-             x="177.92969"
-             xlink:href="#LiberationSans-69"
-             id="use6959" />
+             y="0"
+             width="100%"
+             height="100%" />
           <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="200.14648"
-             xlink:href="#LiberationSans-6c"
-             id="use6961" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="222.36328"
-             xlink:href="#LiberationSans-20"
-             id="use6963" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="250.14648"
-             xlink:href="#LiberationSans-73"
-             id="use6965" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="300.14648"
-             xlink:href="#LiberationSans-69"
-             id="use6967" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="322.36328"
-             xlink:href="#LiberationSans-7a"
-             id="use6969" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="372.36328"
-             xlink:href="#LiberationSans-65"
-             id="use6971" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="427.97852"
-             xlink:href="#LiberationSans-20"
-             id="use6973" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="455.76172"
-             xlink:href="#LiberationSans-28"
-             id="use6975" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="489.0625"
-             xlink:href="#LiberationSans-6e"
-             id="use6977" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="544.67773"
-             xlink:href="#LiberationSans-6f"
-             id="use6979" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="600.29297"
-             xlink:href="#LiberationSans-72"
-             id="use6981" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="633.59375"
-             xlink:href="#LiberationSans-6d"
-             id="use6983" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="716.89453"
+             id="use6903"
              xlink:href="#LiberationSans-2e"
-             id="use6985" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
+             x="88.916016"
              style="stroke-linecap:butt;stroke-linejoin:round"
-             x="744.67773"
-             xlink:href="#LiberationSans-29"
-             id="use6987" />
+             y="0"
+             width="100%"
+             height="100%" />
+          <use
+             id="use6905"
+             xlink:href="#LiberationSans-35"
+             x="116.69922"
+             style="stroke-linecap:butt;stroke-linejoin:round"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="ytick_2"
+       style="stroke-linecap:butt;stroke-linejoin:round"
+       transform="translate(193.09093,-623.04546)">
+      <g
+         id="line2d_17"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <g
+           id="g6909"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             id="use6911"
+             y="171"
+             xlink:href="#m728421d6d4"
+             x="108"
+             style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="line2d_18"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <g
+           id="g6914"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             id="use6916"
+             y="171"
+             xlink:href="#mcb0005524f"
+             x="378"
+             style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="text_8"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <!-- 0 -->
+        <g
+           id="g6919"
+           transform="matrix(0.1,0,0,-0.1,99.220313,173.58594)"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             id="use6921"
+             xlink:href="#LiberationSans-30"
+             style="stroke-linecap:butt;stroke-linejoin:round"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="ytick_3"
+       style="stroke-linecap:butt;stroke-linejoin:round"
+       transform="translate(193.09093,-623.04546)">
+      <g
+         id="line2d_19"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <g
+           id="g6925"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             id="use6927"
+             y="96"
+             xlink:href="#m728421d6d4"
+             x="108"
+             style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="line2d_20"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <g
+           id="g6930"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             id="use6932"
+             y="96"
+             xlink:href="#mcb0005524f"
+             x="378"
+             style="stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="text_9"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <!-- 0.5 -->
+        <g
+           id="g6935"
+           transform="matrix(0.1,0,0,-0.1,90.909375,98.585937)"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             id="use6937"
+             xlink:href="#LiberationSans-30"
+             style="stroke-linecap:butt;stroke-linejoin:round"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+          <use
+             id="use6939"
+             xlink:href="#LiberationSans-2e"
+             x="55.615234"
+             style="stroke-linecap:butt;stroke-linejoin:round"
+             y="0"
+             width="100%"
+             height="100%" />
+          <use
+             id="use6941"
+             xlink:href="#LiberationSans-35"
+             x="83.398438"
+             style="stroke-linecap:butt;stroke-linejoin:round"
+             y="0"
+             width="100%"
+             height="100%" />
         </g>
       </g>
     </g>
@@ -1490,13 +1307,10 @@
            x="188.91602"
            xlink:href="#LiberationSans-6f"
            id="use7008" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="244.53125"
-           xlink:href="#LiberationSans-72"
+           inkscape:connector-curvature="0"
+           d="m 251.46875,0 0,40.5312 q 0,1.6563 -0.0312,3.3907 -0.0156,1.7343 -0.0781,3.3437 -0.0469,1.6094 -0.0937,3.0156 -0.0469,1.4219 -0.0938,2.5469 l 8.29688,0 q 0.0469,-1.125 0.125,-2.5625 0.0781,-1.4375 0.1406,-2.9531 0.0781,-1.5156 0.0938,-2.9063 0.0312,-1.3906 0.0312,-2.3593 l 0.2031,0 q 0.9219,3.0156 1.9688,5.2343 1.0625,2.2344 2.4688,3.6719 1.4218,1.4375 3.375,2.1407 1.9531,0.7187 4.7343,0.7187 1.0781,0 2.0469,-0.1719 0.9844,-0.1718 1.5156,-0.3125 l 0,-8.0625 q -0.875,0.25 -2.0468,0.3594 -1.1719,0.125 -2.6407,0.125 -3.0312,0 -5.1562,-1.375 -2.125,-1.3594 -3.4688,-3.7812 -1.3281,-2.4063 -1.9687,-5.75 -0.6406,-3.3438 -0.6406,-7.2969 l 0,-27.5469 z"
            id="use7010" />
         <use
            height="100%"
@@ -1506,13 +1320,10 @@
            x="277.83203"
            xlink:href="#LiberationSans-69"
            id="use7012" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="300.04883"
-           xlink:href="#LiberationSans-7a"
+           inkscape:connector-curvature="0"
+           d="m 302.43945,0 0,6.6875 32.28128,39.3594 -30.32815,0 0,6.7812 40.23435,0 0,-6.6875 -32.3281,-39.35935 34.1406,0 0,-6.78125 z"
            id="use7014" />
         <use
            height="100%"
@@ -1546,13 +1357,10 @@
            x="461.23047"
            xlink:href="#LiberationSans-61"
            id="use7022" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="516.8457"
-           xlink:href="#LiberationSans-7a"
+           inkscape:connector-curvature="0"
+           d="m 519.23632,0 0,6.6875 32.28128,39.3594 -30.32815,0 0,6.7812 40.23435,0 0,-6.6875 -32.3281,-39.35935 34.1406,0 0,-6.78125 z"
            id="use7024" />
         <use
            height="100%"
@@ -1570,13 +1378,10 @@
            x="622.46094"
            xlink:href="#LiberationSans-20"
            id="use7028" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="650.24414"
-           xlink:href="#LiberationSans-70"
+           inkscape:connector-curvature="0"
+           d="m 701.66604,26.6562 q 0,-6 -0.9844,-11.0781 -0.9687,-5.0781 -3.25,-8.74998 -2.2656,-3.65624 -6,-5.73437 -3.7344,-2.078125 -9.2031,-2.078125 -5.6719,0 -9.9219,2.156255 -4.2344,2.15624 -6.4844,7.03124 l -0.25,0 q 0.0469,-0.09374 0.0781,-0.875 0.0313,-0.78124 0.0469,-1.95312 0.0313,-1.17188 0.0469,-2.625 0.0312,-1.4375 0.0312,-2.84375 l 0,-20.65625 -8.79682,0 0,62.7969 q 0,1.9062 -0.0313,3.6562 -0.0156,1.7657 -0.0625,3.2031 -0.0469,1.4376 -0.0937,2.4532 -0.0469,1.0312 -0.0938,1.4687 l 8.48438,0 q 0.0469,-0.1406 0.125,-1.0312 0.0781,-0.875 0.1406,-2.125 0.0781,-1.2344 0.1563,-2.6563 0.0781,-1.4062 0.0781,-2.6718 l 0.1875,0 q 1.2188,2.5312 2.7812,4.3124 1.5626,1.7813 3.5626,2.9219 2,1.1563 4.4687,1.6719 2.4687,0.5156 5.5469,0.5156 5.4687,0 9.2031,-1.9531 3.7344,-1.9531 6,-5.5 2.2813,-3.5313 3.25,-8.5469 0.9844,-5 0.9844,-11.1094 m -9.2344,-0.1874 q 0,4.875 -0.5937,8.6874 -0.5782,3.8126 -2.0157,6.4376 -1.4375,2.6406 -3.8437,4 -2.3906,1.375 -6,1.375 -2.9219,0 -5.5156,-0.8282 -2.5938,-0.8281 -4.5157,-3.1718 -1.9219,-2.3438 -3.0469,-6.4688 -1.125,-4.125 -1.125,-10.7188 0,-5.6093 0.9219,-9.5 0.9375,-3.875 2.7188,-6.2656 1.7812,-2.3906 4.4062,-3.4531 2.6407,-1.04688 6.0625,-1.04688 3.6563,0 6.0782,1.40626 2.4218,1.42187 3.8593,4.10932 1.4375,2.6876 2.0157,6.5626 0.5937,3.8906 0.5937,8.875"
            id="use7030" />
         <use
            height="100%"
@@ -1634,13 +1439,10 @@
            x="972.65625"
            xlink:href="#LiberationSans-65"
            id="use7044" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="1028.2715"
-           xlink:href="#LiberationSans-72"
+           inkscape:connector-curvature="0"
+           d="m 1035.209,0 0,40.5312 q 0,1.6563 -0.031,3.3907 -0.016,1.7343 -0.078,3.3437 -0.047,1.6094 -0.094,3.0156 -0.047,1.4219 -0.094,2.5469 l 8.2969,0 q 0.047,-1.125 0.125,-2.5625 0.078,-1.4375 0.1406,-2.9531 0.078,-1.5156 0.094,-2.9063 0.031,-1.3906 0.031,-2.3593 l 0.2031,0 q 0.9219,3.0156 1.9688,5.2343 1.0625,2.2344 2.4688,3.6719 1.4218,1.4375 3.375,2.1407 1.9531,0.7187 4.7343,0.7187 1.0781,0 2.0469,-0.1719 0.9844,-0.1718 1.5156,-0.3125 l 0,-8.0625 q -0.875,0.25 -2.0468,0.3594 -1.1719,0.125 -2.6407,0.125 -3.0312,0 -5.1562,-1.375 -2.125,-1.3594 -3.4688,-3.7812 -1.3281,-2.4063 -1.9687,-5.75 -0.6406,-3.3438 -0.6406,-7.2969 l 0,-27.5469 z"
            id="use7046" />
         <use
            height="100%"
@@ -1714,13 +1516,10 @@
            x="1406.0547"
            xlink:href="#LiberationSans-78"
            id="use7064" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="1456.0547"
-           xlink:href="#LiberationSans-70"
+           inkscape:connector-curvature="0"
+           d="m 1507.4766,26.6562 q 0,-6 -0.9844,-11.0781 -0.9687,-5.0781 -3.25,-8.74998 -2.2656,-3.65624 -6,-5.73437 -3.7344,-2.078125 -9.2031,-2.078125 -5.6719,0 -9.9219,2.156255 -4.2344,2.15624 -6.4844,7.03124 l -0.25,0 q 0.047,-0.09374 0.078,-0.875 0.031,-0.78124 0.047,-1.95312 0.031,-1.17188 0.047,-2.625 0.031,-1.4375 0.031,-2.84375 l 0,-20.65625 -8.7968,0 0,62.7969 q 0,1.9062 -0.031,3.6562 -0.016,1.7657 -0.062,3.2031 -0.047,1.4376 -0.094,2.4532 -0.047,1.0312 -0.094,1.4687 l 8.4844,0 q 0.047,-0.1406 0.125,-1.0312 0.078,-0.875 0.1406,-2.125 0.078,-1.2344 0.1563,-2.6563 0.078,-1.4062 0.078,-2.6718 l 0.1875,0 q 1.2188,2.5312 2.7812,4.3124 1.5626,1.7813 3.5626,2.9219 2,1.1563 4.4687,1.6719 2.4687,0.5156 5.5469,0.5156 5.4687,0 9.2031,-1.9531 3.7344,-1.9531 6,-5.5 2.2813,-3.5313 3.25,-8.5469 0.9844,-5 0.9844,-11.1094 m -9.2344,-0.1874 q 0,4.875 -0.5937,8.6874 -0.5782,3.8126 -2.0157,6.4376 -1.4375,2.6406 -3.8437,4 -2.3906,1.375 -6,1.375 -2.9219,0 -5.5156,-0.8282 -2.5938,-0.8281 -4.5157,-3.1718 -1.9219,-2.3438 -3.0469,-6.4688 -1.125,-4.125 -1.125,-10.7188 0,-5.6093 0.9219,-9.5 0.9375,-3.875 2.7188,-6.2656 1.7812,-2.3906 4.4062,-3.4531 2.6407,-1.04688 6.0625,-1.04688 3.6563,0 6.0782,1.40626 2.4218,1.42187 3.8593,4.10932 1.4375,2.6876 2.0157,6.5626 0.5937,3.8906 0.5937,8.875"
            id="use7066" />
         <use
            height="100%"
@@ -1754,525 +1553,6 @@
            x="1622.8516"
            xlink:href="#LiberationSans-29"
            id="use7074" />
-      </g>
-    </g>
-    <g
-       transform="translate(193.09093,-623.04546)"
-       style="stroke-linecap:butt;stroke-linejoin:round"
-       id="legend_1">
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="line2d_21">
-        <path
-           inkscape:connector-curvature="0"
-           d="m 172.901,271.324 16.8,0"
-           style="fill:none;stroke:#75507b;stroke-linecap:square;stroke-linejoin:round"
-           id="path7078" />
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="line2d_22" />
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="text_12">
-        <!-- Memory-Match Left (N=1080) -->
-        <defs
-           id="defs7082">
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 4.89062,41.7969 0,7.2343 48.57818,0 0,-7.2343 z m 0,-25 0,7.2343 48.57818,0 0,-7.2343 z"
-             id="LiberationSans-3d" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 66.7031,0 0,45.9062 q 0,2.4844 0.0469,5.0626 0.0469,2.5937 0.1406,4.75 0.1094,2.4843 0.25,4.8281 -0.6875,-2.4844 -1.4218,-4.9375 -0.625,-2.0938 -1.3907,-4.4688 -0.75,-2.3594 -1.4843,-4.2656 L 45.0625,0 38.5312,0 20.5156,46.875 q -0.2968,0.7344 -0.625,1.7031 -0.3125,0.9844 -0.6875,2.0781 -0.3593,1.1094 -0.7343,2.25 -0.3594,1.1407 -0.6876,2.2657 -0.8437,2.5937 -1.625,5.375 0.0626,-2.7344 0.1563,-5.4219 0.0937,-2.2969 0.1406,-4.8125 Q 16.5,47.7969 16.5,45.9062 L 16.5,0 8.20312,0 l 0,68.7969 12.24998,0 18.3125,-47.7031 q 0.3438,-0.9688 0.8282,-2.5157 0.5,-1.5312 0.9374,-3.1562 0.4376,-1.6094 0.7969,-3.0469 0.375,-1.4375 0.5157,-2.2188 0.1562,0.7813 0.5468,2.25 0.3906,1.4688 0.8906,3.0782 0.5157,1.6094 1,3.125 0.5,1.5156 0.8907,2.4844 l 17.9687,47.7031 11.9532,0 0,-68.7969 z"
-             id="LiberationSans-4d" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="M 52.8281,0 16.0156,58.5938 q 0.0938,-2.3907 0.25,-4.7344 0.0938,-2 0.1563,-4.2344 Q 16.5,47.4062 16.5,45.7031 L 16.5,0 8.20312,0 l 0,68.7969 10.84378,0 L 56.25,9.8125 q -0.1406,2.3906 -0.2969,4.7813 -0.0937,2.0624 -0.1875,4.4687 -0.0937,2.4219 -0.0937,4.625 l 0,45.1094 8.3906,0 0,-68.7969 z"
-             id="LiberationSans-4e" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 15.4844,43.7969 q 1.4531,2.6875 3.1562,4.5625 1.7188,1.8906 3.7656,3.1094 2.0626,1.2187 4.5,1.7812 2.4376,0.5625 5.4688,0.5625 5.0781,0 8.3281,-1.375 3.25,-1.3594 5.125,-3.8281 1.875,-2.4688 2.5781,-5.8906 0.7188,-3.4063 0.7188,-7.5157 l 0,-35.2031 -8.8438,0 0,33.5 q 0,3.3594 -0.4218,5.8906 -0.4063,2.5469 -1.5782,4.2344 -1.1718,1.6875 -3.3281,2.5312 -2.1406,0.8594 -5.5625,0.8594 -3.125,0 -5.6406,-1.125 -2.5156,-1.1094 -4.2969,-3.1718 -1.7812,-2.0469 -2.7656,-4.9844 -0.9687,-2.9219 -0.9687,-6.5782 l 0,-31.1562 -8.7813,0 0,72.4688 8.7813,0 0,-18.8594 q 0,-1.6094 -0.0469,-3.2188 -0.0469,-1.6094 -0.125,-2.9844 -0.0625,-1.3593 -0.125,-2.3124 -0.0469,-0.9532 -0.0938,-1.2969 z"
-             id="LiberationSans-68" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 8.20312,0 0,68.7969 9.32808,0 0,-61.1719 34.7657,0 0,-7.625 z"
-             id="LiberationSans-4c" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="M 29.5,0 Q 27.6406,-4.78125 25.7031,-8.60938 23.7812,-12.4531 21.3906,-15.1562 19,-17.875 16.0625,-19.3125 13.1406,-20.75 9.32812,-20.75 q -1.65624,0 -3.07812,0.0938 -1.42188,0.0937 -2.98438,0.4374 l 0,6.5938 q 0.9375,-0.1406 2.10938,-0.2188 1.17188,-0.0781 2,-0.0781 3.8594,0 7.1719,2.8907 3.3281,2.87495 5.8125,9.17182 L 21.1875,0.25 0.25,52.8281 l 9.375,0 11.125,-29.1875 q 0.4844,-1.3281 1.2344,-3.5312 0.7656,-2.1875 1.5156,-4.3906 0.7656,-2.1876 1.3438,-3.9532 0.5937,-1.75 0.6874,-2.18748 0.1563,0.53128 0.7188,2.10938 0.5625,1.5937 1.2656,3.5469 0.7032,1.9531 1.4375,3.9531 0.7344,2 1.2188,3.4687 l 10.3593,30.1719 9.2813,0 z"
-             id="LiberationSans-79" />
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 51.2656,19.1875 q 0,-4.3906 -1.3906,-8.0781 -1.3906,-3.68752 -4.25,-6.37502 -2.8438,-2.6875 -7.2969,-4.20313 -4.4375,-1.515625 -10.5,-1.515625 -6.0469,0 -10.4687,1.515625 Q 12.9375,2.04688 10.0312,4.70312 7.125,7.375 5.73438,11.0625 4.34375,14.75 4.34375,19.0938 q 0,3.7656 1.14063,6.6874 1.15624,2.9376 3.07812,5.0469 1.9375,2.125 4.4063,3.4219 2.4687,1.2969 5.0937,1.7344 l 0,0.2031 q -2.875,0.6719 -5.1563,2.1875 -2.2656,1.5156 -3.81245,3.6406 -1.53125,2.125 -2.34375,4.7032 -0.79688,2.5937 -0.79688,5.4843 0,3.6094 1.39063,6.7969 1.39063,3.2031 4.12505,5.625 2.7343,2.4219 6.7812,3.8125 4.0625,1.3906 9.3906,1.3906 5.6094,0 9.7344,-1.4219 Q 41.5,67 44.2031,64.5781 q 2.7188,-2.4219 4.0313,-5.6406 1.3281,-3.2187 1.3281,-6.8437 0,-2.8282 -0.8125,-5.4219 -0.7969,-2.5781 -2.3438,-4.7031 -1.5312,-2.125 -3.8124,-3.625 -2.2657,-1.4844 -5.2344,-2.0626 l 0,-0.2031 q 2.9687,-0.4843 5.5,-1.7812 2.5468,-1.2813 4.4062,-3.4063 1.8594,-2.125 2.9219,-5.0625 1.0781,-2.9219 1.0781,-6.6406 M 40.4375,51.6094 q 0,2.5937 -0.6719,4.7344 -0.6562,2.1562 -2.1718,3.6874 -1.5157,1.5469 -3.9532,2.3907 -2.4375,0.8593 -6,0.8593 -3.4687,0 -5.8594,-0.8593 -2.3906,-0.8438 -3.9374,-2.3907 -1.5313,-1.5312 -2.2188,-3.6874 -0.6875,-2.1407 -0.6875,-4.7344 0,-2.0469 0.5313,-4.2032 0.5468,-2.1406 1.9531,-3.9062 1.4219,-1.75 3.9062,-2.875 2.5,-1.125 6.4063,-1.125 4.1562,0 6.6718,1.125 2.5157,1.125 3.8438,2.875 1.3438,1.7656 1.7656,3.9062 0.4219,2.1563 0.4219,4.2032 m 1.7031,-31.5938 q 0,2.5 -0.6875,4.8125 -0.6875,2.3281 -2.3437,4.1094 -1.6563,1.7813 -4.4688,2.875 -2.7968,1.0937 -7,1.0937 -3.8594,0 -6.5781,-1.0937 -2.7031,-1.0937 -4.3906,-2.9063 -1.6875,-1.8124 -2.4688,-4.1874 -0.7812,-2.3594 -0.7812,-4.8907 0,-3.1719 0.7812,-5.7969 0.7813,-2.6093 2.4844,-4.48432 1.7187,-1.875 4.5,-2.90626 2.7813,-1.03124 6.75,-1.03124 4,0 6.7344,1.03124 2.7343,1.03126 4.3906,2.90626 1.6563,1.87502 2.3594,4.53122 0.7187,2.6719 0.7187,5.9375"
-             id="LiberationSans-38" />
-        </defs>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           transform="matrix(0.12,0,0,-0.12,202.90125,275.52375)"
-           id="g7091">
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             x="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             xlink:href="#LiberationSans-4d"
-             id="use7093" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="83.300781"
-             xlink:href="#LiberationSans-65"
-             id="use7095" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="138.91602"
-             xlink:href="#LiberationSans-6d"
-             id="use7097" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="222.2168"
-             xlink:href="#LiberationSans-6f"
-             id="use7099" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="277.83203"
-             xlink:href="#LiberationSans-72"
-             id="use7101" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="311.13281"
-             xlink:href="#LiberationSans-79"
-             id="use7103" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="361.13281"
-             xlink:href="#LiberationSans-2d"
-             id="use7105" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="394.43359"
-             xlink:href="#LiberationSans-4d"
-             id="use7107" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="477.73438"
-             xlink:href="#LiberationSans-61"
-             id="use7109" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="533.34961"
-             xlink:href="#LiberationSans-74"
-             id="use7111" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="561.13281"
-             xlink:href="#LiberationSans-63"
-             id="use7113" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="611.13281"
-             xlink:href="#LiberationSans-68"
-             id="use7115" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="666.74805"
-             xlink:href="#LiberationSans-20"
-             id="use7117" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="694.53125"
-             xlink:href="#LiberationSans-4c"
-             id="use7119" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="750.14648"
-             xlink:href="#LiberationSans-65"
-             id="use7121" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="805.76172"
-             xlink:href="#LiberationSans-66"
-             id="use7123" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="833.54492"
-             xlink:href="#LiberationSans-74"
-             id="use7125" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="861.32812"
-             xlink:href="#LiberationSans-20"
-             id="use7127" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="889.11133"
-             xlink:href="#LiberationSans-28"
-             id="use7129" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="922.41211"
-             xlink:href="#LiberationSans-4e"
-             id="use7131" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="994.62891"
-             xlink:href="#LiberationSans-3d"
-             id="use7133" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1053.0273"
-             xlink:href="#LiberationSans-31"
-             id="use7135" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1108.6426"
-             xlink:href="#LiberationSans-30"
-             id="use7137" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1164.2578"
-             xlink:href="#LiberationSans-38"
-             id="use7139" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1219.873"
-             xlink:href="#LiberationSans-30"
-             id="use7141" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1275.4883"
-             xlink:href="#LiberationSans-29"
-             id="use7143" />
-        </g>
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="line2d_23">
-        <path
-           inkscape:connector-curvature="0"
-           d="m 172.901,288.51 16.8,0"
-           style="fill:none;stroke:#c17d11;stroke-linecap:square;stroke-linejoin:round"
-           id="path7146" />
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="line2d_24" />
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="text_13">
-        <!-- Memory-Match Right (N=1080) -->
-        <defs
-           id="defs7150">
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="m 56.8438,0 -17.875,28.5625 -21.4376,0 0,-28.5625 -9.32808,0 0,68.7969 32.37498,0 q 5.8594,0 10.375,-1.3438 4.5157,-1.3437 7.5938,-3.8906 3.0781,-2.5313 4.6875,-6.1875 1.6094,-3.6562 1.6094,-8.25 0,-3.2812 -0.9532,-6.4531 -0.9531,-3.1719 -3,-5.8125 -2.0468,-2.625 -5.2344,-4.5313 -3.1718,-1.9062 -7.6093,-2.6875 L 67.5781,0 Z m -1.375,49.0312 q 0,3.125 -1.0782,5.4063 -1.0625,2.2969 -3.125,3.8281 -2.0468,1.5469 -4.9844,2.2969 -2.9218,0.7656 -6.625,0.7656 l -22.125,0 0,-25.3906 22.5157,0 q 4,0 6.9219,1 2.9374,1 4.8124,2.75 1.875,1.7656 2.7813,4.1563 0.9063,2.3906 0.9063,5.1874"
-             id="LiberationSans-52" />
-        </defs>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           transform="matrix(0.12,0,0,-0.12,202.90125,292.71)"
-           id="g7153">
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             x="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             xlink:href="#LiberationSans-4d"
-             id="use7155" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="83.300781"
-             xlink:href="#LiberationSans-65"
-             id="use7157" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="138.91602"
-             xlink:href="#LiberationSans-6d"
-             id="use7159" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="222.2168"
-             xlink:href="#LiberationSans-6f"
-             id="use7161" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="277.83203"
-             xlink:href="#LiberationSans-72"
-             id="use7163" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="311.13281"
-             xlink:href="#LiberationSans-79"
-             id="use7165" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="361.13281"
-             xlink:href="#LiberationSans-2d"
-             id="use7167" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="394.43359"
-             xlink:href="#LiberationSans-4d"
-             id="use7169" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="477.73438"
-             xlink:href="#LiberationSans-61"
-             id="use7171" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="533.34961"
-             xlink:href="#LiberationSans-74"
-             id="use7173" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="561.13281"
-             xlink:href="#LiberationSans-63"
-             id="use7175" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="611.13281"
-             xlink:href="#LiberationSans-68"
-             id="use7177" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="666.74805"
-             xlink:href="#LiberationSans-20"
-             id="use7179" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="694.53125"
-             xlink:href="#LiberationSans-52"
-             id="use7181" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="766.74805"
-             xlink:href="#LiberationSans-69"
-             id="use7183" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="788.96484"
-             xlink:href="#LiberationSans-67"
-             id="use7185" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="844.58008"
-             xlink:href="#LiberationSans-68"
-             id="use7187" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="900.19531"
-             xlink:href="#LiberationSans-74"
-             id="use7189" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="927.97852"
-             xlink:href="#LiberationSans-20"
-             id="use7191" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="955.76172"
-             xlink:href="#LiberationSans-28"
-             id="use7193" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="989.0625"
-             xlink:href="#LiberationSans-4e"
-             id="use7195" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1061.2793"
-             xlink:href="#LiberationSans-3d"
-             id="use7197" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1119.6777"
-             xlink:href="#LiberationSans-31"
-             id="use7199" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1175.293"
-             xlink:href="#LiberationSans-30"
-             id="use7201" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1230.9082"
-             xlink:href="#LiberationSans-38"
-             id="use7203" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1286.5234"
-             xlink:href="#LiberationSans-30"
-             id="use7205" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1342.1387"
-             xlink:href="#LiberationSans-29"
-             id="use7207" />
-        </g>
       </g>
     </g>
     <g
@@ -6604,13 +5884,10 @@
            x="188.91602"
            xlink:href="#LiberationSans-6f"
            id="use7532" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="244.53125"
-           xlink:href="#LiberationSans-72"
+           inkscape:connector-curvature="0"
+           d="m 251.46875,0 0,40.5312 q 0,1.6563 -0.0312,3.3907 -0.0156,1.7343 -0.0781,3.3437 -0.0469,1.6094 -0.0937,3.0156 -0.0469,1.4219 -0.0938,2.5469 l 8.29688,0 q 0.0469,-1.125 0.125,-2.5625 0.0781,-1.4375 0.1406,-2.9531 0.0781,-1.5156 0.0938,-2.9063 0.0312,-1.3906 0.0312,-2.3593 l 0.2031,0 q 0.9219,3.0156 1.9688,5.2343 1.0625,2.2344 2.4688,3.6719 1.4218,1.4375 3.375,2.1407 1.9531,0.7187 4.7343,0.7187 1.0781,0 2.0469,-0.1719 0.9844,-0.1718 1.5156,-0.3125 l 0,-8.0625 q -0.875,0.25 -2.0468,0.3594 -1.1719,0.125 -2.6407,0.125 -3.0312,0 -5.1562,-1.375 -2.125,-1.3594 -3.4688,-3.7812 -1.3281,-2.4063 -1.9687,-5.75 -0.6406,-3.3438 -0.6406,-7.2969 l 0,-27.5469 z"
            id="use7534" />
         <use
            height="100%"
@@ -6620,13 +5897,10 @@
            x="277.83203"
            xlink:href="#LiberationSans-69"
            id="use7536" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="300.04883"
-           xlink:href="#LiberationSans-7a"
+           inkscape:connector-curvature="0"
+           d="m 302.43945,0 0,6.6875 32.28128,39.3594 -30.32815,0 0,6.7812 40.23435,0 0,-6.6875 -32.3281,-39.35935 34.1406,0 0,-6.78125 z"
            id="use7538" />
         <use
            height="100%"
@@ -6660,13 +5934,10 @@
            x="461.23047"
            xlink:href="#LiberationSans-61"
            id="use7546" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="516.8457"
-           xlink:href="#LiberationSans-7a"
+           inkscape:connector-curvature="0"
+           d="m 519.23632,0 0,6.6875 32.28128,39.3594 -30.32815,0 0,6.7812 40.23435,0 0,-6.6875 -32.3281,-39.35935 34.1406,0 0,-6.78125 z"
            id="use7548" />
         <use
            height="100%"
@@ -6684,13 +5955,10 @@
            x="622.46094"
            xlink:href="#LiberationSans-20"
            id="use7552" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="650.24414"
-           xlink:href="#LiberationSans-70"
+           inkscape:connector-curvature="0"
+           d="m 701.66604,26.6562 q 0,-6 -0.9844,-11.0781 -0.9687,-5.0781 -3.25,-8.74998 -2.2656,-3.65624 -6,-5.73437 -3.7344,-2.078125 -9.2031,-2.078125 -5.6719,0 -9.9219,2.156255 -4.2344,2.15624 -6.4844,7.03124 l -0.25,0 q 0.0469,-0.09374 0.0781,-0.875 0.0313,-0.78124 0.0469,-1.95312 0.0313,-1.17188 0.0469,-2.625 0.0312,-1.4375 0.0312,-2.84375 l 0,-20.65625 -8.79682,0 0,62.7969 q 0,1.9062 -0.0313,3.6562 -0.0156,1.7657 -0.0625,3.2031 -0.0469,1.4376 -0.0937,2.4532 -0.0469,1.0312 -0.0938,1.4687 l 8.48438,0 q 0.0469,-0.1406 0.125,-1.0312 0.0781,-0.875 0.1406,-2.125 0.0781,-1.2344 0.1563,-2.6563 0.0781,-1.4062 0.0781,-2.6718 l 0.1875,0 q 1.2188,2.5312 2.7812,4.3124 1.5626,1.7813 3.5626,2.9219 2,1.1563 4.4687,1.6719 2.4687,0.5156 5.5469,0.5156 5.4687,0 9.2031,-1.9531 3.7344,-1.9531 6,-5.5 2.2813,-3.5313 3.25,-8.5469 0.9844,-5 0.9844,-11.1094 m -9.2344,-0.1874 q 0,4.875 -0.5937,8.6874 -0.5782,3.8126 -2.0157,6.4376 -1.4375,2.6406 -3.8437,4 -2.3906,1.375 -6,1.375 -2.9219,0 -5.5156,-0.8282 -2.5938,-0.8281 -4.5157,-3.1718 -1.9219,-2.3438 -3.0469,-6.4688 -1.125,-4.125 -1.125,-10.7188 0,-5.6093 0.9219,-9.5 0.9375,-3.875 2.7188,-6.2656 1.7812,-2.3906 4.4062,-3.4531 2.6407,-1.04688 6.0625,-1.04688 3.6563,0 6.0782,1.40626 2.4218,1.42187 3.8593,4.10932 1.4375,2.6876 2.0157,6.5626 0.5937,3.8906 0.5937,8.875"
            id="use7554" />
         <use
            height="100%"
@@ -6748,13 +6016,10 @@
            x="972.65625"
            xlink:href="#LiberationSans-65"
            id="use7568" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="1028.2715"
-           xlink:href="#LiberationSans-72"
+           inkscape:connector-curvature="0"
+           d="m 1035.209,0 0,40.5312 q 0,1.6563 -0.031,3.3907 -0.016,1.7343 -0.078,3.3437 -0.047,1.6094 -0.094,3.0156 -0.047,1.4219 -0.094,2.5469 l 8.2969,0 q 0.047,-1.125 0.125,-2.5625 0.078,-1.4375 0.1406,-2.9531 0.078,-1.5156 0.094,-2.9063 0.031,-1.3906 0.031,-2.3593 l 0.2031,0 q 0.9219,3.0156 1.9688,5.2343 1.0625,2.2344 2.4688,3.6719 1.4218,1.4375 3.375,2.1407 1.9531,0.7187 4.7343,0.7187 1.0781,0 2.0469,-0.1719 0.9844,-0.1718 1.5156,-0.3125 l 0,-8.0625 q -0.875,0.25 -2.0468,0.3594 -1.1719,0.125 -2.6407,0.125 -3.0312,0 -5.1562,-1.375 -2.125,-1.3594 -3.4688,-3.7812 -1.3281,-2.4063 -1.9687,-5.75 -0.6406,-3.3438 -0.6406,-7.2969 l 0,-27.5469 z"
            id="use7570" />
         <use
            height="100%"
@@ -6828,13 +6093,10 @@
            x="1406.0547"
            xlink:href="#LiberationSans-78"
            id="use7588" />
-        <use
-           height="100%"
-           width="100%"
-           y="0"
+        <path
            style="stroke-linecap:butt;stroke-linejoin:round"
-           x="1456.0547"
-           xlink:href="#LiberationSans-70"
+           inkscape:connector-curvature="0"
+           d="m 1507.4766,26.6562 q 0,-6 -0.9844,-11.0781 -0.9687,-5.0781 -3.25,-8.74998 -2.2656,-3.65624 -6,-5.73437 -3.7344,-2.078125 -9.2031,-2.078125 -5.6719,0 -9.9219,2.156255 -4.2344,2.15624 -6.4844,7.03124 l -0.25,0 q 0.047,-0.09374 0.078,-0.875 0.031,-0.78124 0.047,-1.95312 0.031,-1.17188 0.047,-2.625 0.031,-1.4375 0.031,-2.84375 l 0,-20.65625 -8.7968,0 0,62.7969 q 0,1.9062 -0.031,3.6562 -0.016,1.7657 -0.062,3.2031 -0.047,1.4376 -0.094,2.4532 -0.047,1.0312 -0.094,1.4687 l 8.4844,0 q 0.047,-0.1406 0.125,-1.0312 0.078,-0.875 0.1406,-2.125 0.078,-1.2344 0.1563,-2.6563 0.078,-1.4062 0.078,-2.6718 l 0.1875,0 q 1.2188,2.5312 2.7812,4.3124 1.5626,1.7813 3.5626,2.9219 2,1.1563 4.4687,1.6719 2.4687,0.5156 5.5469,0.5156 5.4687,0 9.2031,-1.9531 3.7344,-1.9531 6,-5.5 2.2813,-3.5313 3.25,-8.5469 0.9844,-5 0.9844,-11.1094 m -9.2344,-0.1874 q 0,4.875 -0.5937,8.6874 -0.5782,3.8126 -2.0157,6.4376 -1.4375,2.6406 -3.8437,4 -2.3906,1.375 -6,1.375 -2.9219,0 -5.5156,-0.8282 -2.5938,-0.8281 -4.5157,-3.1718 -1.9219,-2.3438 -3.0469,-6.4688 -1.125,-4.125 -1.125,-10.7188 0,-5.6093 0.9219,-9.5 0.9375,-3.875 2.7188,-6.2656 1.7812,-2.3906 4.4062,-3.4531 2.6407,-1.04688 6.0625,-1.04688 3.6563,0 6.0782,1.40626 2.4218,1.42187 3.8593,4.10932 1.4375,2.6876 2.0157,6.5626 0.5937,3.8906 0.5937,8.875"
            id="use7590" />
         <use
            height="100%"
@@ -6870,486 +6132,74 @@
            id="use7598" />
       </g>
     </g>
-    <g
-       transform="translate(193.09093,-623.04546)"
-       style="stroke-linecap:butt;stroke-linejoin:round"
-       id="legend_2">
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="line2d_45">
-        <path
-           inkscape:connector-curvature="0"
-           d="m 442.901,271.324 16.8,0"
-           style="fill:none;stroke:#75507b;stroke-linecap:square;stroke-linejoin:round"
-           id="path7602" />
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="line2d_46" />
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="text_22">
-        <!-- Memory-Match Left (N=1064) -->
-        <defs
-           id="defs7606">
-          <path
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             inkscape:connector-curvature="0"
-             d="M 51.2188,22.5156 Q 51.2188,17.3281 49.7812,13 48.3438,8.6875 45.5312,5.57812 42.7188,2.48438 38.5625,0.75 34.4219,-0.984375 29,-0.984375 q -6,0 -10.5,2.296875 Q 14.0156,3.60938 11.0312,7.92188 8.0625,12.25 6.5625,18.5312 5.07812,24.8125 5.07812,32.8125 q 0,9.1875 1.6875,16.1094 1.6875,6.9375 4.85938,11.5781 3.1719,4.6406 7.7344,6.9844 4.5625,2.3437 10.3281,2.3437 3.5156,0 6.5937,-0.7343 3.0782,-0.7344 5.5938,-2.375 2.5156,-1.625 4.4062,-4.3126 1.9063,-2.6874 3.0313,-6.5937 l -8.3906,-1.5156 q -1.375,4.4375 -4.375,6.4219 -3,1.9843 -6.9531,1.9843 -3.6094,0 -6.5469,-1.7187 -2.9219,-1.7032 -4.9844,-5.1094 -2.0469,-3.3906 -3.1563,-8.5156 -1.0937,-5.125 -1.0937,-11.9532 2.4063,4.4376 6.75,6.75 4.3437,2.3282 9.9531,2.3282 4.6875,0 8.5,-1.5156 3.8125,-1.5157 6.5156,-4.375 2.7188,-2.8438 4.2032,-6.9219 1.4844,-4.0781 1.4844,-9.1563 M 42.2812,22.125 q 0,3.5625 -0.875,6.4375 -0.875,2.8906 -2.6406,4.9063 -1.75,2.0312 -4.3437,3.125 -2.5781,1.1093 -6,1.1093 -2.3907,0 -4.8438,-0.7187 -2.4375,-0.7032 -4.4219,-2.2969 -1.9687,-1.5781 -3.2187,-4.1719 -1.2344,-2.5781 -1.2344,-6.2968 0,-3.8126 0.9688,-7.1094 0.9843,-3.2969 2.8125,-5.7344 1.8281,-2.4375 4.4062,-3.85938 2.5938,-1.40624 5.8282,-1.40624 3.1718,0 5.6874,1.09374 2.5157,1.09376 4.2657,3.17188 1.7656,2.0781 2.6875,5.0469 0.9218,2.9843 0.9218,6.7031"
-             id="LiberationSans-36" />
-        </defs>
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           transform="matrix(0.12,0,0,-0.12,472.90125,275.52375)"
-           id="g7609">
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             x="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             xlink:href="#LiberationSans-4d"
-             id="use7611" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="83.300781"
-             xlink:href="#LiberationSans-65"
-             id="use7613" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="138.91602"
-             xlink:href="#LiberationSans-6d"
-             id="use7615" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="222.2168"
-             xlink:href="#LiberationSans-6f"
-             id="use7617" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="277.83203"
-             xlink:href="#LiberationSans-72"
-             id="use7619" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="311.13281"
-             xlink:href="#LiberationSans-79"
-             id="use7621" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="361.13281"
-             xlink:href="#LiberationSans-2d"
-             id="use7623" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="394.43359"
-             xlink:href="#LiberationSans-4d"
-             id="use7625" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="477.73438"
-             xlink:href="#LiberationSans-61"
-             id="use7627" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="533.34961"
-             xlink:href="#LiberationSans-74"
-             id="use7629" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="561.13281"
-             xlink:href="#LiberationSans-63"
-             id="use7631" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="611.13281"
-             xlink:href="#LiberationSans-68"
-             id="use7633" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="666.74805"
-             xlink:href="#LiberationSans-20"
-             id="use7635" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="694.53125"
-             xlink:href="#LiberationSans-4c"
-             id="use7637" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="750.14648"
-             xlink:href="#LiberationSans-65"
-             id="use7639" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="805.76172"
-             xlink:href="#LiberationSans-66"
-             id="use7641" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="833.54492"
-             xlink:href="#LiberationSans-74"
-             id="use7643" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="861.32812"
-             xlink:href="#LiberationSans-20"
-             id="use7645" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="889.11133"
-             xlink:href="#LiberationSans-28"
-             id="use7647" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="922.41211"
-             xlink:href="#LiberationSans-4e"
-             id="use7649" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="994.62891"
-             xlink:href="#LiberationSans-3d"
-             id="use7651" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1053.0273"
-             xlink:href="#LiberationSans-31"
-             id="use7653" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1108.6426"
-             xlink:href="#LiberationSans-30"
-             id="use7655" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1164.2578"
-             xlink:href="#LiberationSans-36"
-             id="use7657" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1219.873"
-             xlink:href="#LiberationSans-34"
-             id="use7659" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1275.4883"
-             xlink:href="#LiberationSans-29"
-             id="use7661" />
-        </g>
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="line2d_47">
-        <path
-           inkscape:connector-curvature="0"
-           d="m 442.901,288.51 16.8,0"
-           style="fill:none;stroke:#c17d11;stroke-linecap:square;stroke-linejoin:round"
-           id="path7664" />
-      </g>
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="line2d_48" />
-      <g
-         style="stroke-linecap:butt;stroke-linejoin:round"
-         id="text_23">
-        <!-- Memory-Match Right (N=1065) -->
-        <g
-           style="stroke-linecap:butt;stroke-linejoin:round"
-           transform="matrix(0.12,0,0,-0.12,472.90125,292.71)"
-           id="g7668">
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             x="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             xlink:href="#LiberationSans-4d"
-             id="use7670" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="83.300781"
-             xlink:href="#LiberationSans-65"
-             id="use7672" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="138.91602"
-             xlink:href="#LiberationSans-6d"
-             id="use7674" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="222.2168"
-             xlink:href="#LiberationSans-6f"
-             id="use7676" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="277.83203"
-             xlink:href="#LiberationSans-72"
-             id="use7678" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="311.13281"
-             xlink:href="#LiberationSans-79"
-             id="use7680" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="361.13281"
-             xlink:href="#LiberationSans-2d"
-             id="use7682" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="394.43359"
-             xlink:href="#LiberationSans-4d"
-             id="use7684" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="477.73438"
-             xlink:href="#LiberationSans-61"
-             id="use7686" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="533.34961"
-             xlink:href="#LiberationSans-74"
-             id="use7688" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="561.13281"
-             xlink:href="#LiberationSans-63"
-             id="use7690" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="611.13281"
-             xlink:href="#LiberationSans-68"
-             id="use7692" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="666.74805"
-             xlink:href="#LiberationSans-20"
-             id="use7694" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="694.53125"
-             xlink:href="#LiberationSans-52"
-             id="use7696" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="766.74805"
-             xlink:href="#LiberationSans-69"
-             id="use7698" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="788.96484"
-             xlink:href="#LiberationSans-67"
-             id="use7700" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="844.58008"
-             xlink:href="#LiberationSans-68"
-             id="use7702" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="900.19531"
-             xlink:href="#LiberationSans-74"
-             id="use7704" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="927.97852"
-             xlink:href="#LiberationSans-20"
-             id="use7706" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="955.76172"
-             xlink:href="#LiberationSans-28"
-             id="use7708" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="989.0625"
-             xlink:href="#LiberationSans-4e"
-             id="use7710" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1061.2793"
-             xlink:href="#LiberationSans-3d"
-             id="use7712" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1119.6777"
-             xlink:href="#LiberationSans-31"
-             id="use7714" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1175.293"
-             xlink:href="#LiberationSans-30"
-             id="use7716" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1230.9082"
-             xlink:href="#LiberationSans-36"
-             id="use7718" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1286.5234"
-             xlink:href="#LiberationSans-35"
-             id="use7720" />
-          <use
-             height="100%"
-             width="100%"
-             y="0"
-             style="stroke-linecap:butt;stroke-linejoin:round"
-             x="1342.1387"
-             xlink:href="#LiberationSans-29"
-             id="use7722" />
-        </g>
-      </g>
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="396.41498"
+       y="273.64825"
+       id="text5270"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5272"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';stroke-linecap:butt;stroke-linejoin:round"
+         x="396.41498"
+         y="273.64825">Mean horiz. gaze pos. (°)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="352.36597"
+       y="-524.66992"
+       id="text5245"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5247"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#8f5902;stroke-linecap:butt;stroke-linejoin:round"
+         x="352.36597"
+         y="-524.66992">Memory-match right (<tspan
+   style="font-style:italic;fill:#8f5902;stroke-linecap:butt;stroke-linejoin:round"
+   id="tspan5289">N</tspan>=1080)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="356.19897"
+       y="-374.66989"
+       id="text5245-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5247-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#5c3566;stroke-linecap:butt;stroke-linejoin:round"
+         x="356.19897"
+         y="-374.66989">Memory-match left (<tspan
+   style="font-style:italic;fill:#5c3566;stroke-linecap:butt;stroke-linejoin:round"
+   id="tspan5289-8">N</tspan>=1080)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="622.36597"
+       y="-524.66992"
+       id="text5245-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5247-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#8f5902;stroke-linecap:butt;stroke-linejoin:round"
+         x="622.36597"
+         y="-524.66992">Memory-match right (<tspan
+   style="font-style:italic;fill:#8f5902;stroke-linecap:butt;stroke-linejoin:round"
+   id="tspan5289-0">N</tspan>=1065)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="626.19897"
+       y="-374.66989"
+       id="text5245-1-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5247-4-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#5c3566;stroke-linecap:butt;stroke-linejoin:round"
+         x="626.19897"
+         y="-374.66989">Memory-match left (<tspan
+   style="font-style:italic;fill:#5c3566;stroke-linecap:butt;stroke-linejoin:round"
+   id="tspan5289-8-4">N</tspan>=1064)</tspan></text>
   </g>
 </svg>
