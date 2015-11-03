@@ -54,6 +54,10 @@ def gazeDev(dm, suffix=''):
 			'Center\n0',
 			'Memory-match probe\n%.1f' % ecc])
 		__dm['maxGazeDev'][__dm.where('probePosTarget == "left"')] *= -1
+
+		xdm = __dm.select('maxGazeDev < -170')
+		xdm = __dm.select('maxGazeDev > 170')
+
 		plt.xlim(-400, 400)
 		plt.axvspan(-170, 170, color=gray[1], zorder=-1000)
 		plt.axvline(0, linestyle=':', color='black')

@@ -34,7 +34,7 @@ The experiment consisted of 24 practice trials, followed by 144 experimental tri
 
 ### Trial-exclusion criteria
 
-Trials were discarded when horizontal gaze deviation from the display center during the retention interval exceeded the maximum displacement of the central gradient (15.8%; see Methods: Procedure). Due to a technical problem, manual responses were not logged for some trials; these were excluded (1.3%). No participants were excluded. In total, 1,749 trials remained for further analysis.
+Trials were discarded when horizontal gaze deviation from the display center during the retention interval exceeded the maximum displacement of the central gradient (15.8%; see Methods: Procedure). Due to a technical problem (a buffer overflow in the connection between the EyeLink and experimental PC), manual responses were not logged for some trials; these were excluded (1.3%). No participants were excluded. In total, 1,794 trials remained for further analysis.
 
 ### Behavioral results
 
@@ -47,10 +47,10 @@ figure:
  source: FigGazeDev.svg
  id: FigGazeDev
  caption: |
-  a, b) Mean horizontal gaze position over time for Experiment 1 (a) and 2 (b). Gray shadings indicate a reliable effect of Memory-Match Side. Error bands indicate standard errors. c, d) Histogram of the per-trial maximum gaze deviation toward the memory-match probe for Experiment 1 (c) and 2 (d). The shaded area indicates the maximum displacement of the gaze-locked central gradient; trials that fell outside of this area were removed for the main analyses.
+  a, b) Mean horizontal gaze position over time for Experiments 1 (a) and 2 (b). Gray shadings indicate a reliable effect of Memory-Match Side. Error bands indicate standard errors. c, d) Histogram of the per-trial maximum gaze deviation toward the memory-match probe for Experiments 1 (c) and 2 (d). The shaded area indicates the maximum displacement of the gaze-locked central gradient; trials that fell outside of this area were removed for the main analyses.
 --%
 
-On about 15% of trials, despite that we had instructed participants to maintain central fixation, gaze deviated considerably from the display center; trials with such gaze errors were discarded for the main (pupil-size and behavioral) analyses. However, we used the full, untrimmed data to test whether and when the eyes were captured by the memory-match probe. For each 10 ms period, we conducted an LME with horizontal gaze position as dependent measure, Memory-Match-Probe Position (Left, Right) as fixed effect and by-participant random intercept and slopes. As shown in %FigGazeDev::a, the eyes were sometimes captured by the memory-match probe at the start of the retention interval, but there was hardly any capture later in time (230 - 449 ms; criterion: t > 2 for at least 200 ms, cf. @Mathôt2014Exo). The systematic gaze deviation is driven by a small and distinct proportion of trials on which the eyes were captured by the memory-match probe (%FigGazeDev::c). The eyes rarely went to the non-matching probe.
+On about 15% of trials, despite that we had instructed participants to maintain central fixation, gaze deviated considerably from the display center; trials with such gaze errors were discarded for the main (pupil-size and behavioral) analyses. However, we used the full, untrimmed data to test whether and when the eyes were captured by the memory-match probe. For each 10 ms period, we conducted an LME with horizontal gaze position as dependent measure, Memory-Match-Probe Position (Left, Right) as fixed effect, and by-participant random intercept and slopes. As shown in %FigGazeDev::a, the eyes were sometimes captured by the memory-match probe at the start of the retention interval, but there was hardly any capture later in time (230 - 449 ms; criterion: t > 2 for at least 200 ms, cf. @Mathôt2014Exo). The systematic gaze deviation is driven by a small and distinct proportion of trials on which the eyes were captured by the memory-match probe (%FigGazeDev::c). Most gaze errors were directed toward the memory-match probe (13.2%); the eyes rarely went to the non-matching probe (2.6%).
 
 ### Pupil-size results
 
@@ -70,4 +70,4 @@ figure:
 
 ## Discussion
 
-In Exp. 1, we found that, at the start of the retention interval, the eyes were captured by the probe that matched the content of visual working memory (memory-match probe). However, the pupillary data suggest that this initial gaze bias did not result in a sustained shift of attention toward the memory-match probe throughout the retention interval; that is, when the memory-match probe appeared on a bright background, the pupil was not smaller than when it appeared on a dark background; rather, there was a tendency in the opposite direction.
+In Exp. 1, we found that, at the start of the retention interval, the eyes were captured by the probe that matched the contents of visual working memory (memory-match probe). However, the pupillary data suggest that this initial gaze bias did not result in a sustained shift of attention toward the memory-match probe throughout the retention interval; that is, when the memory-match probe appeared on a bright background, the pupil was not smaller than when it appeared on a dark background; rather, there was a tendency in the opposite direction.

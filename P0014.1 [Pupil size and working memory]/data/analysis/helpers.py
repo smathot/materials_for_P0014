@@ -71,9 +71,10 @@ def filter(dm):
 	dm1 = dm1.select('response_time != ""')
 	print('Experiment 2:')
 	dm2 = dm.select('exp == "exp2"')
+	dm2 = dm2.select('trialType == "memory"')
 	dm2 = dm2.select('maxGazeErr < 1024/6')
 	dm2 = dm2.select('response_time != ""')
-	dm2 = dm2.select('trialType == "attention"')
+	quit()
 
 	# Gaze plot by Experiment
 	Plot.new(size=(10,5))

@@ -207,8 +207,15 @@ def pupilTracePlotExp(dm, traceParams=defaultTraceParams):
 		plt.legend(frameon=False, loc='lower right')
 	Plot.save('pupilTraceExp')
 	# Create one overall plot
-	Plot.new(Plot.w)
+	Plot.new(size=(4,4))
+	plt.title('b) Pupil-size trace across both experiments')
 	pupilTracePlot(dm, subplot=True, model=model, suffix='.lmer.expGrand')
+	plt.ylim(.91, 1.01)
+	plt.xticks(range(0, 4001, 1000))
+	plt.ylabel('Pupil size (norm.)')
+	plt.xlabel('Time since cue offset (ms)')
+	plt.axhline(1, linestyle=':', color='black')
+	plt.legend(frameon=False, loc='lower right')	
 	Plot.save('pupilTraceExp.grand')
 
 @validate
@@ -379,6 +386,7 @@ def subjectDiffMatrix(dm, win=(900, 1100)):
 		return _dm
 	_dm = getMatrix(dm, cacheId='subjectDiffMatrix')
 	Plot.new(size=(4,4))
+	plt.title('a) Individual-participant data')
 	plt.axhline(0, color='black')
 	x = np.arange(0, len(_dm))-.5
 	for i, y in enumerate(_dm['pupil_diff']):

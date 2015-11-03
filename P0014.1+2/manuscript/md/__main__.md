@@ -54,6 +54,6 @@ The authors declare no competing financial interests.
 
 # Author contributions
 
-EvdH collected the data. SM and EvdH analyzed the data. SM wrote the first draft of the manuscript. All authors contributed to the design of the experiment, and revision of the manuscript.
+EH collected the data. SM and EH analyzed the data. SM wrote the first draft of the manuscript. All authors contributed to the design of the experiment, and revision of the manuscript.
 
 ~
