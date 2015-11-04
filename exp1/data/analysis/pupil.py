@@ -61,78 +61,6 @@ def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix='',
 		Plot.save('pupilTracePlot%s' % suffix, show=show)
 
 @validate
-def pupilTracePlotSubject(dm, traceParams=defaultTraceParams):
-
-	"""
-	desc:
-		Plots the pupil trace during the retention interval, separately for cue-
-		on-bright and cue-on-dark trials, and separately for each participant.
-
-	arguments:
-		dm:
-			desc:	A DataMatrix.
-			type:	DataMatrix
-
-	keywords:
-		traceParams:
-			desc:	The pupil-trace parameters.
-			type:	dict
-	"""
-
-	N = dm.count('subject_nr')
-	i = 1
-	Plot.new(Plot.xl)
-	for subject_nr in dm.unique('subject_nr'):
-		_dm = dm.select('subject_nr == %d' % subject_nr)
-		plt.subplot(math.ceil(N/3.), 3, i)
-		plt.title('subject %d (N=%d)' % (subject_nr, len(_dm)))
-		pupilTracePlot(_dm, subplot=True)
-		i += 1
-	Plot.save('pupilTracePlotSubject')
-
-@validate
-def pupilTracePlotRT(dm, traceParams=defaultTraceParams):
-
-	"""
-	desc:
-		Plots the pupil trace during the retention interval, separately for cue-
-		on-bright and cue-on-dark trials, and separately for correct and
-		incorrect trials.
-
-	arguments:
-		dm:
-			desc:	A DataMatrix.
-			type:	DataMatrix
-
-	keywords:
-		traceParams:
-			desc:	The pupil-trace parameters.
-			type:	dict
-	"""
-
-	Plot.new(Plot.w)
-
-	dm = dm.select('correct == 1')
-	dm = dm.addField('_rt', dtype=float)
-	dm = dm.addField('rtx', dtype=float)
-	dm = dm.calcPerc('response_time', '_rt', keys=['subject_nr'], nBin=2)
-	dm['_rt'] /= 50
-	dm['rtx'] = dm['_rt']
-	print(dm.collapse(['_rt'], 'response_time'))
-	for i, _rt in [(1, 0), (2, 1)]:
-		_dm = dm.select('_rt == %d' % _rt)
-		plt.subplot(2, 1, i)
-		plt.title('RT = %d (N=%d)' % (_rt, len(_dm)))
-		pupilTracePlot(_dm, subplot=True, model=model,
-			suffix='.lmer.rt%s' % _rt)
-	Plot.save('pupilTraceRT')
-	_model = 'targetLum*rtx + (1+rtx+targetLum|subject_nr)'
-	_dm = dm.select('trialType == "memory"')
-	mm = tk.mixedModelTrace(_dm, _model, winSize=winSize,
-		cacheId='.lmer.rtGrand', **defaultTraceParams)
-	tk.statsTrace(mm)
-
-@validate
 def pupilTracePlotCorrect(dm, traceParams=defaultTraceParams):
 
 	"""
@@ -172,7 +100,8 @@ def pupilTracePlotExp(dm, traceParams=defaultTraceParams):
 	"""
 	desc:
 		Plots the pupil trace during the retention interval, separately for cue-
-		on-bright and cue-on-dark trials, and separately for Exp 1 and 2.
+		on-bright and cue-on-dark trials, and separately for Exp 1 and 2. Also
+		creates pupil-trace plot for both experiments combined.
 
 	arguments:
 		dm:
@@ -215,7 +144,7 @@ def pupilTracePlotExp(dm, traceParams=defaultTraceParams):
 	plt.ylabel('Pupil size (norm.)')
 	plt.xlabel('Time since cue offset (ms)')
 	plt.axhline(1, linestyle=':', color='black')
-	plt.legend(frameon=False, loc='lower right')	
+	plt.legend(frameon=False, loc='lower right')
 	Plot.save('pupilTraceExp.grand')
 
 @validate
@@ -259,46 +188,6 @@ def pupilTracePlotCue(dm, traceParams=defaultTraceParams):
 			suffix='.lmer.cue%d' % memCue)
 		plt.legend(frameon=False, loc='lower right')
 	Plot.save('pupilTraceCue')
-
-@validate
-def pupilTracePlotColorClass(dm, suffix='', traceParams=defaultTraceParams):
-
-	"""
-	desc:
-		Plots the pupil trace during the retention interval, separately for cue-
-		on-bright and cue-on-dark trials, and separately for different target
-		and distractor colors.
-
-	arguments:
-		dm:
-			desc:	A DataMatrix.
-			type:	DataMatrix
-
-	keywords:
-		traceParams:
-			desc:	The pupil-trace parameters.
-			type:	dict
-	"""
-
-	dm = dm.select('trialType == "memory"')
-	Plot.new(Plot.xl)
-	i = 1
-	for clrClsTarget in colorClasses:
-		for clrClsDist in colorClasses:
-			_dm = dm.select('clrClsTarget == "%s"' % clrClsTarget)
-			_dm = _dm.select('clrClsDist == "%s"' % clrClsDist)
-			plt.subplot(3, 3, i)
-			plt.title('Target: %s, Dist: %s (N=%d)' \
-				% (clrClsTarget, clrClsDist, len(_dm)))
-			pupilTracePlot(_dm, subplot=True)
-			i += 1
-	Plot.save('pupilTraceColorClass'+suffix)
-
-def pupilTracePlotColorClassExp(dm, suffix='', traceParams=defaultTraceParams):
-
-	assert(exp == 'expX')
-	pupilTracePlotColorClass(dm.select('exp == "exp1"'), suffix='.exp1')
-	pupilTracePlotColorClass(dm.select('exp == "exp2"'), suffix='.exp2')
 
 @validate
 def pupilTracePlotIndividual(dm, traceParams=defaultTraceParams):
@@ -349,20 +238,23 @@ def pupilTracePlotIndividual(dm, traceParams=defaultTraceParams):
 	plt.xlabel('Time (ms)')
 	Plot.save('pupilTraceIndividual')
 
-@cachedPickle
-def pupilEffect(dm, i=None, traceParams=defaultTraceParams):
-
-	x1, y1, err1 = tk.getTraceAvg(dm.select(q1, verbose=False),
-		**traceParams)
-	x2, y2, err2 = tk.getTraceAvg(dm.select(q2, verbose=False),
-		**traceParams)
-	# Positive effects positive
-	d = y2-y1
-	if i is None:
-		i = np.argmin(d)
-	return d[i], i
-
+@validate
 def subjectDiffMatrix(dm, win=(900, 1100)):
+
+	"""
+	desc:
+		Plots the mean pupil effect for each participant in a given window.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+
+	keywords:
+		win:
+			desc:	The window to analyze.
+			type:	tuple
+	"""
 
 	@cachedDataMatrix
 	def getMatrix(dm):
@@ -403,7 +295,21 @@ def subjectDiffMatrix(dm, win=(900, 1100)):
 	plt.ylabel('Pupil-size difference (dark - bright)')
 	Plot.save('subjectDiffMatrix')
 
+@validate
 def sortedHeatmap(dm):
+
+	"""
+	desc:
+		Plots a heatmap in which the pupil effect is shown over time for
+		individual participants. Each column is sorted by strength of the
+		effect, so that you get a good visualisation, but cannot identify
+		individual participants.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+	"""
 
 	dm = dm.select('trialType == "memory"')
 	@cachedArray
@@ -428,13 +334,3 @@ def sortedHeatmap(dm):
 		vmin=-.075, vmax=.075)
 	plt.colorbar()
 	Plot.save('heatmap')
-
-# def behavPupilLmer(dm):
-#
-# 	dm = dm.select('trialType == "memory"').select('correct == 1')
-# 	m = 'targetLum*response_time + (1+targetLum+response_time|subject_nr)'
-# 	dm['response_time'] /= dm['response_time'].std()
-# 	mm = tk.mixedModelTrace(dm, m, winSize=250, cacheId='behavPupilLmer',
-# 		**defaultTraceParams)
-# 	tk.statsTrace(mm)
-# 	plt.show()

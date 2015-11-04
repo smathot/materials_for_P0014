@@ -19,7 +19,23 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 
 from analysis.constants import *
 
+@validate
 def gazeDev(dm, suffix=''):
+
+	"""
+	desc:
+		Creates a histogram of the maximum gaze deviation.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+
+	keywords:
+		suffix:
+			desc:	A suffix to identify the analysis.
+			type:	str
+	"""
 
 	_model = 'maxGazeDev ~ probePosTarget + (1+probePosTarget|subject_nr)'
 
@@ -70,7 +86,26 @@ def gazeDev(dm, suffix=''):
 		plt.fill_between(x, y, color=blue[1])
 	Plot.save('maxGazeDev%s' % suffix)
 
+@validate
 def gazeTracePlot(dm, suffix, subplot=False):
+
+	"""
+	desc:
+		Analyzes gaze deviation over time.
+
+	arguments:
+		dm:
+			desc:	A DataMatrix.
+			type:	DataMatrix
+		suffix:
+			desc:	A suffix to identify the analysis.
+			type:	str
+
+	keywords:
+		subplot:
+			desc:	Indicates if it's a subplot or standalone.
+			type:	bool
+	"""
 
 	assert(exp == 'expX')
 	dm = dm.select('trialType == "memory"')

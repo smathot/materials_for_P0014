@@ -20,12 +20,13 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 from analysis.constants import *
 from analysis import gaze
 
-# @cachedDataMatrix
+@validate
 def filter(dm):
 
 	"""
 	desc:
-		Filters and recodes the data for subsequent processing.
+		Filters and recodes the data for subsequent processing. Also calls
+		gaze-analysis functions, which need to be done before filtering.
 
 	arguments:
 		dm:
@@ -74,8 +75,6 @@ def filter(dm):
 	dm2 = dm2.select('trialType == "memory"')
 	dm2 = dm2.select('maxGazeErr < 1024/6')
 	dm2 = dm2.select('response_time != ""')
-	quit()
-
 	# Gaze plot by Experiment
 	Plot.new(size=(10,5))
 	plt.subplots_adjust(wspace=0)
@@ -187,27 +186,3 @@ def behavior(dm):
 					'response_time')
 				cm.save('output/cm.rt.csv')
 				print(cm)
-
-def attentionStats(dm):
-
-	"""
-	desc:
-		Performs statistics on the attention condition of Exp 2.
-
-	arguments:
-		dm:
-			desc:	A DataMatrix.
-			type:	DataMatrix
-	"""
-
-	assert(exp == 'exp2' or exp == 'expX')
-	_dm = dm.select('trialType == "attention"')
-	_dmCor = _dm
-	R = RBridge.R()
-	R.load(_dmCor)
-	lm = R.lmer('response_time ~ attMatch + (1+attMatch|subject_nr)')
-	print(lm)
-	R.load(_dm)
-	lm = R.glmer('correct ~ attMatch + (1+attMatch|subject_nr)',
-		family='binomial')
-	print(lm)

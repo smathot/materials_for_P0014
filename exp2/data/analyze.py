@@ -21,11 +21,6 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 from exparser import Tools
 from analysis import constants
 constants.exp = 'exp2'
-from analysis import helpers, parse, corr
-Tools.analysisLoop(
-	parse.getDataMatrix(cacheId='data'),
-	mods=[helpers, corr],
-	pre=['filter'],
-	full=['descriptives', 'behavior', 'pupilTracePlot',
-		'pupilTracePlotSubject', 'pupilTracePlotColorClass'],
-	)
+from analysis import helpers, parse
+Tools.analysisLoop(parse.getDataMatrix(cacheId='data'),
+	mods=[helpers], pre=['filter'])

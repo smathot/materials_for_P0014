@@ -21,13 +21,19 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 from analysis import constants
 constants.exp = 'expX'
 from exparser import Tools
-from analysis import helpers, parse, corr, pupil
+from analysis import helpers, parse, pupil
 Tools.analysisLoop(
 	parse.getDataMatrix(cacheId='data'),
-	mods=[helpers, corr, pupil],
+	mods=[helpers, pupil],
 	pre=['filter'],
-	full=['descriptives', 'behavior', 'pupilTracePlotLmer',
-		'pupilTracePlotIndividual', 'pupilTracePlotSubject',
-		'pupilTracePlotColorClass', 'pupilTracePlotCorrect',
-		'pupilTracePlotExp', 'pupilTracePlotColorClassExp']
+	full=[
+		'descriptives',
+		'behavior',
+		'pupilTracePlotIndividual',
+		'pupilTracePlotCue',
+		'pupilTracePlotCorrect',
+		'pupilTracePlotExp',
+		'subjectDiffMatrix',
+		'sortedHeatmap'
+		]
 	)
