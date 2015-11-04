@@ -56,7 +56,7 @@ On about 15% of trials, despite that we had instructed participants to maintain 
 
 We analyzed pupil size during the retention interval. Mean pupil size during the last 100 ms of cue presentation was taken as a baseline, and all pupil size measures are reported in area (i.e., not diameter) relative to this baseline. Pupil size during blinks was reconstructed using cubic-spline interpolation [@Mathôt2013Blinks]. Pupil size was smoothed with a 31 ms Hanning window.
 
-For each 10 ms period, we conducted an LME with normalized pupil size as dependent measure, Probe Brightness (Probe-on-Dark, Probe-on-Bright) as fixed effect, and by-participant random intercept and slopes. Only correct-response trials were included in this analysis.
+For each 10 ms period, we conducted an LME with normalized pupil size as dependent measure, Probe Brightness (Probe-on-Dark, Probe-on-Bright) as fixed effect, and by-participant random intercept and slopes [cf. @MathôtMelmiCastet2015]. Only correct-response trials were included in this analysis.
 
 %FigPupilTrace::a shows pupil size over time as a function of Probe Brightness. There is an overall constriction from about 250 ms after the start of the retention interval; this is a visual response to the onset of the retention-interval display. This constriction is followed by a slow dilation, which is partly a recovery from the initial constriction, and partly an effect of memory load [e.g., @KahnemanBeatty1966]. Crucially, and in contrast to our prediction, the pupil was slightly (but not reliably; criterion: t > 2 for at least 200 ms) larger, rather than smaller, when the memory-match probe was on a bright (orange line), compared to a dark (blue line), background.
 
