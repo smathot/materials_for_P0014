@@ -47,6 +47,8 @@ def filter(dm):
 		i = (dm['trialType'] == 'attention') & \
 			(dm['attProbePos'] == dm['probePosTarget'])
 		dm['attMatch'][np.where(i)] = 1
+	elif exp == 'exp3':
+		dm = dm.addField('trialType', dtype=str, default='memory')
 	# The subject numbers do not match those deduced from the file names. So
 	# we need to fix this and assert that we have exactly 30 unique subject
 	# numbers
@@ -55,8 +57,12 @@ def filter(dm):
 			f = dm['file'][i]
 			f = os.path.splitext(f)[0]
 			dm['subject_nr'][i] = int(f[7:]) + 1000
-		else:
+		elif dm['exp'][i] == 'exp2':
 			dm['subject_nr'][i] = int(dm['file'][i][2:4]) + 2000
+		else:
+			# TODO recode subject numbers for experiment 3
+			dm['subject_nr'][i] = 3000
+			pass
 	for _dm in dm.group('file'):
 		print('file %s -> subject_nr %d' % (_dm['file'][0], \
 			_dm['subject_nr'][0]))
@@ -78,22 +84,19 @@ def filter(dm):
 	# Gaze plot by Experiment
 	Plot.new(size=(10,5))
 	plt.subplots_adjust(wspace=0)
-	i = 1
-	for _exp in ['exp1', 'exp2']:
+	for i, _exp in enumerate(['exp1', 'exp2', 'exp3']):
 		_dm = dm.select('exp == "%s"' % _exp)
-		plt.subplot(1, 2, i); i+= 1
-		plt.ylim(.91, 1.01)
+		plt.subplot(1, 3, i+1)
 		plt.xticks(range(0, 4001, 1000))
 		gaze.gazeTracePlot(_dm, subplot=True, suffix='.lmer.%s' % _exp)
 		if _exp == 'exp2':
 			plt.gca().yaxis.set_ticklabels([])
-			plt.title('b) Horiz. gaze pos. over time (Exp. 2)')
+			plt.title('b) Gaze bias over time (Exp. 2)')
 		else:
-			plt.ylabel('Pupil size (norm.)')
-			plt.title('a) Horiz. gaze pos. over time (Exp. 1)')
+			plt.ylabel('Gaze-bias toward memory-match probe (deg.)')
+			plt.title('a) Gaze bias over time (Exp. 1)')
 		plt.xlabel('Time since cue offset (ms)')
 		plt.axhline(1, linestyle=':', color='black')
-		plt.legend(frameon=False, loc='lower right')
 	Plot.save('gazeTraceExp')
 	gaze.gazeDev(dm, suffix='.pre')
 	gaze.gazeDev(dm.select('memCue == 1'), suffix='.pre.memCue1')
@@ -186,3 +189,23 @@ def behavior(dm):
 					'response_time')
 				cm.save('output/cm.rt.csv')
 				print(cm)
+
+def behavioralCuingEffect(dm):
+
+	dmCor = dm.select('correct == 1')
+	pm = PivotMatrix(dm, ['subject_nr'], ['congruency'], dv='correct',
+		func='shape[0]')
+	pm._print('N')
+	pm = PivotMatrix(dm, ['subject_nr'], ['congruency'], dv='correct')
+	pm._print('Accruacy')
+	pm = PivotMatrix(dm, ['subject_nr'], ['congruency'], dv='response_time')
+	pm._print('RT')
+	pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
+		dv='correct', func='shape[0]')
+	pm._print('N')
+	pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
+		dv='correct')
+	pm._print('Accruacy')
+	pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
+		dv='response_time')
+	pm._print('RT')

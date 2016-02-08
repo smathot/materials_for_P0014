@@ -87,7 +87,7 @@ def gazeDev(dm, suffix=''):
 	Plot.save('maxGazeDev%s' % suffix)
 
 @validate
-def gazeTracePlot(dm, suffix, subplot=False):
+def gazeTracePlot(dm, suffix='', subplot=False):
 
 	"""
 	desc:
@@ -97,29 +97,27 @@ def gazeTracePlot(dm, suffix, subplot=False):
 		dm:
 			desc:	A DataMatrix.
 			type:	DataMatrix
+
+	keywords:
 		suffix:
 			desc:	A suffix to identify the analysis.
 			type:	str
-
-	keywords:
 		subplot:
 			desc:	Indicates if it's a subplot or standalone.
 			type:	bool
 	"""
 
-	assert(exp == 'expX')
 	dm = dm.select('trialType == "memory"')
 	if not subplot:
 		Plot.new(size=(4,4))
 	plt.axhline(512, color='black', linestyle=':')
-	plt.yticks([512-35/2., 512, 512+35/2.], [-.5, 0, .5])
-	plt.ylim(512-35*.9, 512+35*.9)
-	# plt.yticks([512-35*.75, 512, 512+35*.75], [-.75, 0, .75])
-	plt.xlabel('Time since cue offset (ms)')
-	plt.ylabel('Horizontal gaze position (deg.)')
-	tk.plotTraceContrast(dm, gq1, gq2, color1=purple[1], color2=brown[1],
-		label1='Memory-Match Left (N=%d)' % len(dm.select(gq1)),
-		label2='Memory-Match Right (N=%d)' % len(dm.select(gq2)),
+	plt.ylim(35*-.1, 35*1.75)
+	# For the scale, we need to take into account the pixels per degree and the
+	# fact that we're plotting a difference score, which needs to be divided by
+	# two to arrive at a bias.
+	plt.yticks([0, 35*.5, 35*1, 35*1.5], [0, .25, .5, .75])
+	tk.plotTraceContrast(dm, gq1, gq2, colorDiff=purple[1],
+		showDiff=True, showAbs=False,
 		model=gazeModel, cacheId='gazeTrace%s' % suffix,
 		winSize=winSize, **gazeParams)
 	plt.legend(frameon=False, loc='lower right')
