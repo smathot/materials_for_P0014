@@ -60,9 +60,7 @@ def filter(dm):
 		elif dm['exp'][i] == 'exp2':
 			dm['subject_nr'][i] = int(dm['file'][i][2:4]) + 2000
 		else:
-			# TODO recode subject numbers for experiment 3
-			dm['subject_nr'][i] = 3000
-			pass
+			dm['subject_nr'][i] += 3000
 	for _dm in dm.group('file'):
 		print('file %s -> subject_nr %d' % (_dm['file'][0], \
 			_dm['subject_nr'][0]))

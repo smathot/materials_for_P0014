@@ -59,6 +59,9 @@ attentionTraceParams = {
 	'smoothParams'	: smoothParams
 	}
 
+exp3TraceParams = defaultTraceParams.copy()
+exp3TraceParams['traceLen'] = 2500
+
 gazeParams = {
 	'signal'		: 'x',
 	'lock'			: 'start',
@@ -74,7 +77,7 @@ validExp = 'exp1', 'exp2', 'exp3', 'expX' # Known experiment codes
 colorClasses = 'red', 'green', 'blue'
 model = 'targetLum + (1+targetLum|subject_nr)'
 gazeModel = 'probePosTarget + (1+probePosTarget|subject_nr)'
-winSize = 10
+winSize = 100
 q1 = 'targetLum == "bright"'
 q2 = 'targetLum == "dark"'
 gq1 = 'probePosTarget == "left"'

@@ -21,7 +21,7 @@ from analysis.constants import *
 
 @validate
 def pupilTracePlot(dm, traceParams=defaultTraceParams, suffix='',
-	subplot=False, model=None, trialType='memory'):
+	subplot=False, model=model, trialType='memory'):
 
 	"""
 	desc:
@@ -258,7 +258,8 @@ def subjectDiffMatrix(dm, win=(900, 1100)):
 
 	@cachedDataMatrix
 	def getMatrix(dm):
-		dm = dm.select('trialType == "memory"')
+		if exp == 'exp2':
+			dm = dm.select('trialType == "memory"')
 		l = [['subject_nr', 'pupil_bright', 'pupil_dark', 'pupil_diff']]
 		for subject_nr, _dm in dm.walk('subject_nr'):
 			print(subject_nr)

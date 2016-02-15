@@ -21,8 +21,8 @@ along with P0014.1.  If not, see <http://www.gnu.org/licenses/>.
 from exparser import Tools
 from analysis import constants
 constants.exp = 'exp3'
-constants.model = None
 constants.gazeModel = None
+constants.defaultTraceParams = constants.exp3TraceParams
 from analysis import helpers, parse, pupil
 Tools.analysisLoop(parse.getDataMatrix(cacheId='data'),
 	mods=[helpers, pupil], pre=['filter'])
