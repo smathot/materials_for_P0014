@@ -55,10 +55,10 @@ def correlate_cuing(dm):
 	plt.axhline(0, linestyle=':', color='black')
 	plt.plot(rt_r, color=tango.orange[1], label='Response time')
 	plot.threshold(rt_p < .05, y=-.5, color=tango.orange[1], linewidth=5,
-		min_length=MINLEN)
+		min_length=1)
 	plt.axhline(0, linestyle=':', color='black')
 	plt.plot(acc_r, color=tango.blue[1], label='Accuracy')
 	plot.threshold(acc_p < .05, y=-.5, color=tango.blue[1], linewidth=5,
-		min_length=MINLEN)
+		min_length=1)
 	plt.legend(loc='lower right')
 	plot.save('correlate_cuing', folder=analysis.exp)

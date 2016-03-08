@@ -35,4 +35,4 @@ if '--snapshot' in sys.argv:
 	git.snapshot('md/__main__.md', msg=sys.argv[-1])
 else:
 	build.DOCX('md/__main__.md', 'latest-manuscript.docx')
-	build.PDF('md/__main__.md', 'latest-manuscript.pdf', lineNumbers=True)
+	build.PDF('md/__main__.md', 'latest-manuscript.pdf', lineNumbers=False)

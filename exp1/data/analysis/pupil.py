@@ -335,3 +335,9 @@ def sortedHeatmap(dm):
 		vmin=-.075, vmax=.075)
 	plt.colorbar()
 	Plot.save('heatmap')
+
+def pupilTracePlotExp3(dm):
+
+	dm = dm.select('correct == 1')
+	dm = dm.select('congruency == 1')
+	pupilTracePlot(dm, suffix='exp3')

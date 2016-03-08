@@ -50,7 +50,7 @@ def pupil_crossexp(dm):
 		# plt.fill_between(xdata, rm.est[1]-rm.se[1], rm.est[1]+rm.se[1], color=color,
 		# 	alpha=.25)
 		# plt.plot(rm.est[1], label=task, color='black')
-		plt.plot(pupil, label=task, color=color)
+		plt.plot(pupil, label='%s (N=%d)' % (task, len(dm_)), color=color)
 		rm = rm_ref2
 	a = srs.threshold(rm_ref1.t, lambda t: np.abs(t) > 2, min_length=MINLEN)
 	plot.threshold(a[1], y=.002, color=tango.green[1], linewidth=5)

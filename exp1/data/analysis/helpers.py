@@ -60,7 +60,7 @@ def filter(dm):
 		elif dm['exp'][i] == 'exp2':
 			dm['subject_nr'][i] = int(dm['file'][i][2:4]) + 2000
 		else:
-			dm['subject_nr'][i] += 3000
+			dm['subject_nr'][i] += int(dm['file'][i][7:-4]) + 3000
 	for _dm in dm.group('file'):
 		print('file %s -> subject_nr %d' % (_dm['file'][0], \
 			_dm['subject_nr'][0]))
@@ -191,19 +191,21 @@ def behavior(dm):
 def behavioralCuingEffect(dm):
 
 	dmCor = dm.select('correct == 1')
-	pm = PivotMatrix(dm, ['subject_nr'], ['congruency'], dv='correct',
+	pm = PivotMatrix(dm, ['congruency'], ['subject_nr'], dv='correct',
 		func='shape[0]')
 	pm._print('N')
-	pm = PivotMatrix(dm, ['subject_nr'], ['congruency'], dv='correct')
-	pm._print('Accruacy')
-	pm = PivotMatrix(dm, ['subject_nr'], ['congruency'], dv='response_time')
+	pm = PivotMatrix(dm, ['congruency'], ['subject_nr'], dv='correct')
+	pm._print('Accuracy')
+	pm.save('output/accuracy.csv')
+	pm = PivotMatrix(dm, ['congruency'], ['subject_nr'], dv='response_time')
 	pm._print('RT')
-	pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
-		dv='correct', func='shape[0]')
-	pm._print('N')
-	pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
-		dv='correct')
-	pm._print('Accruacy')
-	pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
-		dv='response_time')
-	pm._print('RT')
+	pm.save('output/rt.csv')
+	# pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
+	# 	dv='correct', func='shape[0]')
+	# pm._print('N')
+	# pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
+	# 	dv='correct')
+	# pm._print('Accruacy')
+	# pm = PivotMatrix(dm, ['subject_nr'], ['targetLoc', 'probePosTarget'],
+	# 	dv='response_time')
+	# pm._print('RT')

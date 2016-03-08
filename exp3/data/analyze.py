@@ -23,6 +23,6 @@ from analysis import constants
 constants.exp = 'exp3'
 constants.gazeModel = None
 constants.defaultTraceParams = constants.exp3TraceParams
-from analysis import helpers, parse, pupil
+from analysis import helpers, parse, pupil, corr
 Tools.analysisLoop(parse.getDataMatrix(cacheId='data'),
-	mods=[helpers, pupil], pre=['filter'])
+	mods=[helpers, pupil, corr], pre=['filter'])
