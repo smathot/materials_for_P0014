@@ -8,6 +8,8 @@ elif '--exp2' in sys.argv:
 	exp = 'exp2'
 elif '--exp3' in sys.argv:
 	exp = 'exp3'
+elif '--exp12' in sys.argv:
+	exp = 'exp12'
 elif '--expX' in sys.argv:
 	exp = 'expX'
 else:

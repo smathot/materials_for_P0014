@@ -9,5 +9,4 @@ dm = dispatch.waterfall(
 	(parse.eyelink_parser, 'data-%s' % analysis.exp, {'exp' : analysis.exp}),
 	(main.preprocess, 'preprocess-%s' % analysis.exp, {})
 	)
-
 dispatch.dispatch(dm, modules=[pupil, gaze, main, behavior, corr])

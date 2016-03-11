@@ -27,3 +27,14 @@ def cuing_effect(dm):
 	print(pm)
 	io.writetxt(pm, 'output/exp3/pivot_acc.csv')
 	print('%.2f vs %.2f' % (pm._0.mean, pm._1.mean))
+
+	print('Correct RTs')
+	pm = ops.pivot_table(dm.correct == 1, values='response_time', index='subject_nr',
+		columns=['congruency', 'memCue'])
+	print(pm)
+	io.writetxt(pm, 'output/exp3/pivot_rt-by-cue.csv')
+	print('\nAccuracy')
+	pm = ops.pivot_table(dm, values='correct', index='subject_nr',
+		columns=['congruency', 'memCue'])
+	print(pm)
+	io.writetxt(pm, 'output/exp3/pivot_acc-by-cue.csv')

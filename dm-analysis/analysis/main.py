@@ -8,12 +8,18 @@ import os
 @cached
 def preprocess(dm):
 
-	if analysis.exp == 'expX':
+	"""
+	Performs basic preprocessing of the data, including signal processing of
+	the pupil, and removing practice and gaze-error trials.
+	"""
+
+	if analysis.exp in ('expX', 'exp12'):
 		return dm
 	ops.keep_only(dm, [
 		'practice', 'response_time', 'congruency', 'xtrace_retention',
 		'ptrace_retention', 'targetLum', 'probePosTarget', 'memCue', 'correct',
-		'subject_nr', 'path', 'ptrace_cue', 'trialType'
+		'subject_nr', 'path', 'ptrace_cue', 'trialType', 'clrClsTarget',
+		'clrClsDist'
 		])
 	# The subject numbers do not match those deduced from the file names. So
 	# we need to fix this and assert that we have exactly 30 unique subject
@@ -32,11 +38,13 @@ def preprocess(dm):
 		assert(2*len(dm.subject_nr.unique) == len(dm.path.unique))
 	else:
 		assert(len(dm.subject_nr.unique) == len(dm.path.unique))
+	del dm.path
 	print('%d subjects' % len(dm.subject_nr.unique))
 	# Remove practice
 	dm = _summarize(dm, dm.practice == 'no', 'Practice')
+	del dm.practice
 	# Filter gaze errors
-	dm.xgaze = srs.smooth(dm.xtrace_retention, winlen=31) - XC
+	dm.xgaze = srs.smooth(dm.xtrace_retention, winlen=SMOOTHWIN_GAZE) - XC
 	del dm.xtrace_retention
 	dm.n_gaze_err = srs.reduce_(dm.xgaze, _gaze_error)
 	# Process pupil trace
@@ -44,8 +52,8 @@ def preprocess(dm):
 	dm.baseline = srs.blinkreconstruct(dm.ptrace_cue)
 	del dm.ptrace_retention
 	del dm.ptrace_cue
-	dm.pupil = srs.smooth(dm.pupil, winlen=31)
-	dm.baseline = srs.smooth(dm.baseline, winlen=31)
+	dm.pupil = srs.smooth(dm.pupil, winlen=SMOOTHWIN_PUPIL)
+	dm.baseline = srs.smooth(dm.baseline, winlen=SMOOTHWIN_PUPIL)
 	dm.pupil = srs.baseline(dm.pupil, dm.baseline, BASELINE_WINDOW[0],
 		BASELINE_WINDOW[1])
 	if analysis.exp == 'exp3':
